@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url"
+                          value="jdbc:mysql://10.19.187.125:3306/member_center?autoReconnect=true&amp;useUnicode=true&amp;zeroDateTimeBehavior=convertToNull"/>
+                <property name="username" value="yhhy_stage"/>
+                <property name="password" value="Ho5E9G3p96bo"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper class="com.shawn.mybatis.learn.mapper.MemberMapper"/>
+    </mappers>
+</configuration>
