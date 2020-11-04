@@ -5,7 +5,6 @@
     <artifactId>commons-pool2-learn</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>commons-pool2-learn</name>
     <url>http://maven.apache.org</url>
     <parent>
         <artifactId>learn-center</artifactId>
