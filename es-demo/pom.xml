@@ -2,35 +2,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.shawn</groupId>
-    <artifactId>slf4j-log4j2-demo</artifactId>
+    <artifactId>es-demo</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>slf4j-log4j2-demo</name>
+    <name>es-demo</name>
     <url>http://maven.apache.org</url>
-
     <parent>
         <groupId>com.shawn</groupId>
-        <artifactId>log-learn</artifactId>
+        <artifactId>learn-center</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>.././pom.xml</relativePath>
     </parent>
-
     <dependencies>
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j18-impl</artifactId>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+            <version>7.10.0</version>
         </dependency>
 
         <dependency>

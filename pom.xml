@@ -25,6 +25,9 @@
         <module>springboot-learn</module>
         <module>springboot-my-starter</module>
         <module>log-learn</module>
+        <module>clazzloader-demo</module>
+        <module>hbase-demo</module>
+        <module>es-demo</module>
     </modules>
 
     <properties>
