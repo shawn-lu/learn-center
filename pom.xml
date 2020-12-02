@@ -28,6 +28,7 @@
         <module>clazzloader-demo</module>
         <module>hbase-demo</module>
         <module>es-demo</module>
+        <module>bytebuddy-demo</module>
     </modules>
 
     <properties>
