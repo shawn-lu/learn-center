@@ -15,6 +15,7 @@
         <module>jmh-demo</module>
         <module>mybatis-learn</module>
         <module>commons-pool2-learn</module>
+        <module>disruptor-learn</module>
     </modules>
 
     <properties>
