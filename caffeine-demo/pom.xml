@@ -5,7 +5,6 @@
     <artifactId>caffeine-demo</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>caffeine-demo</name>
     <url>http://maven.apache.org</url>
 
     <parent>

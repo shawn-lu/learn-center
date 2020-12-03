@@ -1,3 +1,5 @@
 ﻿.idea
 *.iml
 */target
+log-learn/slf4j-log4j1-demo/target
+log-learn/slf4j-log4j2-demo/target

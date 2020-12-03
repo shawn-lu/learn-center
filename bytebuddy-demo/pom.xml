@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.shawn</groupId>
+    <artifactId>bytebuddy-demo</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>bytebuddy-demo</name>
+    <url>http://maven.apache.org</url>
+
+    <parent>
+        <groupId>com.shawn</groupId>
+        <artifactId>learn-center</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>.././pom.xml</relativePath>
+    </parent>
+    <properties>
+        <bytebuddy.version>1.10.18</bytebuddy.version>
+        <premain.class>com.shawn.demo.bytebuddy.BuddyStarter</premain.class>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy</artifactId>
+            <version>${bytebuddy.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy-agent</artifactId>
+            <version>${bytebuddy.version}</version>
+            <!--            <scope>test</scope>-->
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-shade-plugin</artifactId>
+                <configuration>
+                    <finalName>bytebuddy-cut</finalName>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                                                        <createDependencyReducedPom>true</createDependencyReducedPom>
+                            <!--                            <createSourcesJar>true</createSourcesJar>
+                                                        <shadeSourcesContent>true</shadeSourcesContent>-->
+                            <transformers>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                    <resource>META-INF/spring.handlers</resource>
+                                </transformer>
+                                <transformer
+                                        implementation="org.springframework.boot.maven.PropertiesMergingResourceTransformer">
+                                    <resource>META-INF/spring.factories</resource>
+                                </transformer>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                    <resource>META-INF/spring.schemas</resource>
+                                </transformer>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
+<!--                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>${start-class}</mainClass>
+                                </transformer>-->
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <manifestEntries>
+                                        <Premain-Class>${premain.class}</Premain-Class>
+                                        <!--                                        <Can-Redefine-Classes>${can.redefine.classes}</Can-Redefine-Classes>-->
+                                        <!--                                        <Automatic-Module-Name>org.aspectj.weaver</Automatic-Module-Name>-->
+                                    </manifestEntries>
+                                </transformer>
+                            </transformers>
+                            <!--<relocations>
+                                <relocation>
+                                    <pattern>${shade.com.google.gson.source}</pattern>
+                                    <shadedPattern>${shade.com.google.gson.target}</shadedPattern>
+                                </relocation>
+                            </relocations>-->
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

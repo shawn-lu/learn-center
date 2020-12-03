@@ -8,6 +8,12 @@
     <artifactId>learn-center</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.10.RELEASE</version>
+        <relativePath/>
+    </parent>
 
     <modules>
         <module>caffeine-demo</module>
@@ -15,7 +21,14 @@
         <module>jmh-demo</module>
         <module>mybatis-learn</module>
         <module>commons-pool2-learn</module>
-        <module>disruptor-learn</module>
+        <module>diamond-learn</module>
+        <module>springboot-learn</module>
+        <module>springboot-my-starter</module>
+        <module>log-learn</module>
+        <module>clazzloader-demo</module>
+        <module>hbase-demo</module>
+        <module>es-demo</module>
+        <module>bytebuddy-demo</module>
     </modules>
 
     <properties>
