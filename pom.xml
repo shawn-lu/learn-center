@@ -29,6 +29,7 @@
         <module>hbase-demo</module>
         <module>es-demo</module>
         <module>bytebuddy-demo</module>
+        <module>netty-demo</module>
     </modules>
 
     <properties>
