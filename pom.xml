@@ -30,6 +30,7 @@
         <module>es-demo</module>
         <module>bytebuddy-demo</module>
         <module>netty-demo</module>
+        <module>disruptor-learn</module>
     </modules>
 
     <properties>
