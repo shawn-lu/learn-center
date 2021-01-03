@@ -22,11 +22,13 @@
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
-            <version>4.1.50.Final</version>
+            <version>5.0.0.Alpha1</version>
         </dependency>
+
 
         <dependency>
             <groupId>junit</groupId>

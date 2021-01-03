@@ -69,7 +69,7 @@ public class EventTransactionBuffer {
                 break;
             case ROWDATA:
                 put(dataEntry);
-//                flush();
+                flush();
                 // 针对非DML的数据，直接输出，不进行buffer控制
 //                EntryType entryType = dataEntry.getEventType();
 //                if (entryType != null && !isDml(entryType)) {
