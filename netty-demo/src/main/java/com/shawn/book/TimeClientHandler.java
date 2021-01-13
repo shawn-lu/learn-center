@@ -13,27 +13,42 @@ import java.util.logging.Logger;
 public class TimeClientHandler extends ChannelHandlerAdapter{
     private final Logger logger = Logger.getLogger(TimeClientHandler.class.getName());
 
-    private final ByteBuf firstMessage;
+    private int counter = 0;
+    private byte[] req;
+
 
     public TimeClientHandler(){
-        byte[] req = "QUERY TIME ORDER".getBytes();
-        firstMessage = Unpooled.buffer(req.length);
-        firstMessage.writeBytes(req);
+        req = ("QUERY TIME ORDER"+System.getProperty("line.separator")).getBytes();
     }
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        ctx.writeAndFlush(firstMessage);
+        try {
+            ByteBuf message = null;
+            for(int i=0;i<50;i++){
+//                counter++;
+                message = Unpooled.buffer(req.length);
+                message.writeBytes(req);
+//                System.out.println(message);
+                ctx.writeAndFlush(message);
+            }
+            System.out.println(counter);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        System.out.println(msg);
-        ByteBuf buf = (ByteBuf)msg;
-        byte[] req = new byte[buf.readableBytes()];
-        buf.readBytes(req);
-        String body = new String(req,"UTF-8");
+        String body = (String)msg;
         System.out.println("now is " + body);
+
+//        System.out.println(msg);
+//        ByteBuf buf = (ByteBuf)msg;
+//        byte[] req = new byte[buf.readableBytes()];
+//        buf.readBytes(req);
+//        String body = new String(req,"UTF-8");
+//        System.out.println("now is " + body);
     }
 
     @Override
