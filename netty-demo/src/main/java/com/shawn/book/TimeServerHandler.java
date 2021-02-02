@@ -19,7 +19,7 @@ public class TimeServerHandler extends ChannelHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx,Object msg) throws Exception{
         try {
             counter++;
-            System.out.println("counter:" + counter);
+            System.out.println( "counter:" + counter);
 
             String body = (String)msg;
             System.out.println("the time server receive order : " + body);
