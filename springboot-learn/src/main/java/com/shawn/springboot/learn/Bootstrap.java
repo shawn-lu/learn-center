@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.redis.core.RedisTemplate;
 
 import java.io.IOException;
 import java.net.URL;
@@ -19,6 +20,9 @@ public class Bootstrap implements CommandLineRunner {
     @Autowired
     private HelloFormatTemplate helloFormatTemplate;
     private static String STATIC_LOGGER_BINDER_PATH = "org/slf4j/impl/StaticLoggerBinder.class";
+
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     public static void main(String[] args) {
         SpringApplication.run(Bootstrap.class, args);
@@ -44,5 +48,7 @@ public class Bootstrap implements CommandLineRunner {
     public void run(String... args) throws Exception {
         String formatProperties = helloFormatTemplate.doFormat();
         System.out.println(formatProperties);
+
+        System.out.println(redisTemplate);
     }
 }

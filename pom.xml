@@ -16,6 +16,7 @@
     </parent>
 
     <modules>
+        <module>groovy-demo</module>
         <module>caffeine-demo</module>
         <module>concurrent-demo</module>
         <module>jmh-demo</module>

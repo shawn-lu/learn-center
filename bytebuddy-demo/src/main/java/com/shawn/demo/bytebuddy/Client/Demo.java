@@ -20,5 +20,7 @@ public class Demo {
         Arrays.stream(Foo.class.getMethods()).forEach(m -> {
             System.out.println(m.getName());
         });
+
+
     }
 }
