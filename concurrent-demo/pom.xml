@@ -24,10 +24,21 @@
             <artifactId>canal.client</artifactId>
             <version>1.1.0</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.rocketmq</groupId>-->
+<!--            <artifactId>rocketmq-client</artifactId>-->
+<!--            <version>4.3.0</version>-->
+<!--        </dependency>-->
+
+        <!--        <dependency>-->
+        <!--            <groupId>com.alibaba.rocketmq</groupId>-->
+        <!--            <artifactId>rocketmq-client</artifactId>-->
+        <!--            <version>3.2.6</version>-->
+        <!--        </dependency>-->
         <dependency>
-            <groupId>org.apache.rocketmq</groupId>
-            <artifactId>rocketmq-client</artifactId>
-            <version>4.3.0</version>
+            <groupId>com.yonghui</groupId>
+            <artifactId>rocketmq-producer-saas-spring-boot-starter</artifactId>
+            <version>1.2.21-RC11</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>

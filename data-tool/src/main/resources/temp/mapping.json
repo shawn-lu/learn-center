@@ -1,0 +1,141 @@
+{
+  "aliases": {},
+  "mappings": {
+    "type_bhd_base_supplier_purchasing_info": {
+      "properties": {
+        "clear_location_code": {
+          "type": "text"
+        },
+        "clear_purchase_org": {
+          "type": "text"
+        },
+        "clear_tag": {
+          "type": "text"
+        },
+        "clearance_mark": {
+          "type": "text"
+        },
+        "control_rate": {
+          "type": "text"
+        },
+        "coop_mode_code": {
+          "type": "text"
+        },
+        "cover_differ_flag": {
+          "type": "text"
+        },
+        "create_by": {
+          "type": "text"
+        },
+        "created_time": {
+          "type": "text"
+        },
+        "credit_control_quota": {
+          "type": "text"
+        },
+        "currency": {
+          "type": "text"
+        },
+        "del_tag": {
+          "type": "integer"
+        },
+        "delivery_days": {
+          "type": "text"
+        },
+        "direct_trans_flag": {
+          "type": "text"
+        },
+        "effective_days": {
+          "type": "text"
+        },
+        "finance_purchase_frozen": {
+          "type": "text"
+        },
+        "frozen_tag": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "long"
+        },
+        "initial_amount": {
+          "type": "text"
+        },
+        "instead_invent": {
+          "type": "integer"
+        },
+        "invoice_verification": {
+          "type": "text"
+        },
+        "is_contract": {
+          "type": "integer"
+        },
+        "is_delete": {
+          "type": "integer"
+        },
+        "is_joint": {
+          "type": "text"
+        },
+        "pay_condition": {
+          "type": "text"
+        },
+        "process_flag": {
+          "type": "integer"
+        },
+        "promo_contribution_rate": {
+          "type": "text"
+        },
+        "promotion_charge_flag": {
+          "type": "text"
+        },
+        "purchase_create_time": {
+          "type": "text"
+        },
+        "purchase_group_code": {
+          "type": "text"
+        },
+        "purchase_org_code": {
+          "type": "text"
+        },
+        "purchase_org_code_create_time": {
+          "type": "text"
+        },
+        "shop_business_purchase_org": {
+          "type": "text"
+        },
+        "signed_purchase": {
+          "type": "text"
+        },
+        "supplier_code": {
+          "type": "text"
+        },
+        "supplier_main_tax_rate": {
+          "type": "text"
+        },
+        "supplier_plan_code": {
+          "type": "text"
+        },
+        "supplier_purchase_org_mix_code": {
+          "type": "text"
+        },
+        "sys_admin": {
+          "type": "text"
+        },
+        "trade_clauses": {
+          "type": "text"
+        },
+        "update_by": {
+          "type": "text"
+        },
+        "updated_time": {
+          "type": "text"
+        }
+      }
+    }
+  },
+  "settings": {
+    "index": {
+      "number_of_shards": "5",
+      "number_of_replicas": "1"
+    }
+  }
+}

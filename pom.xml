@@ -25,6 +25,9 @@
         <module>springboot-learn</module>
         <module>springboot-my-starter</module>
         <module>log-learn</module>
+        <module>kafka-demo</module>
+        <module>disruptor-learn</module>
+        <module>data-tool</module>
     </modules>
 
     <properties>

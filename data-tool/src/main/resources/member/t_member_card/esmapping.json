@@ -1,0 +1,63 @@
+{
+  "mappings": {
+    "properties": {
+      "cardNo": {
+        "type": "keyword"
+      },
+      "cardStatus": {
+        "type": "keyword"
+      },
+      "cardType": {
+        "type": "keyword"
+      },
+      "createdAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "expiredDate": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "id": {
+        "type": "long"
+      },
+      "issueDate": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "lastUpdatedAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "memberId": {
+        "type": "long"
+      },
+      "memberNo": {
+        "type": "keyword"
+      },
+      "platform": {
+        "type": "integer"
+      },
+      "shopId": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      }
+    }
+  },
+  "settings": {
+    "index": {
+      "number_of_shards": "1",
+      "max_result_window": "100000",
+      "number_of_replicas": "1"
+    }
+  }
+}

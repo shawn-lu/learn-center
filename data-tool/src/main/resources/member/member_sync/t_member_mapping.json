@@ -1,0 +1,83 @@
+{
+  "mappings": {
+    "properties": {
+      "aliasName": {
+        "type": "keyword"
+      },
+      "birthday": {
+        "type": "date",
+        "format": "yyyy-MM-dd"
+      },
+      "checkPhoneFlag": {
+        "type": "integer"
+      },
+      "createdAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "email": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "long"
+      },
+      "idNo": {
+        "type": "keyword"
+      },
+      "idType": {
+        "type": "keyword"
+      },
+      "lastUpdatedAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "memberId": {
+        "type": "long"
+      },
+      "memberNo": {
+        "type": "keyword"
+      },
+      "memberStatus": {
+        "type": "keyword"
+      },
+      "memberType": {
+        "type": "keyword"
+      },
+      "mobile": {
+        "type": "keyword"
+      },
+      "openId": {
+        "type": "keyword"
+      },
+      "platform": {
+        "type": "integer"
+      },
+      "qq": {
+        "type": "keyword"
+      },
+      "sex": {
+        "type": "keyword"
+      },
+      "signupCity": {
+        "type": "keyword"
+      },
+      "signupTime": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "updatedAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      },
+      "userName": {
+        "type": "keyword"
+      }
+    }
+  }
+}

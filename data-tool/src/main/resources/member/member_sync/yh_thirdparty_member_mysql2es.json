@@ -1,0 +1,67 @@
+{
+  "job": {
+    "setting": {
+      "speed": {
+        "channel": "5"
+      }
+    },
+    "content": [
+      {
+        "reader": {
+          "name": "mysqlreader",
+          "parameter": {
+            "username": "yh_dev",
+            "password": "DvpJe2x",
+            "column": [
+ "id",
+  "member_id",
+  "thirdparty_type",
+  "app_id",
+  "open_id",
+  "created_at",
+  "created_by",
+  "updated_at",
+  "updated_by",
+  "last_updated_at",
+  "is_deleted"
+],
+            "splitPk": "id",
+            "connection": [
+              {
+                "table": [
+                  "yh_thirdparty_member"
+                ],
+                "jdbcUrl": [
+                  "jdbc:mysql://10.251.77.188:3306/member_center"
+                ]
+              }
+            ]
+          }
+        },
+        "writer": {
+          "name": "elasticsearchwriter",
+          "parameter": {
+            "flatToNested": true,
+            "endpoint": "http://10.195.5.32:9200",
+            "accessId": "elastic",
+            "accessKey": "ak7NEDt41fu43pY6U0J6y1k9",
+            "index": "member_yh_thirdparty_member",
+            "type": "",
+            "cleanup": true,
+            "settings": {
+              "index": {
+                "number_of_shards": 1,
+                "number_of_replicas": 0
+              }
+            },
+            "discovery": false,
+            "batchSize": 1000,
+            "splitter": ",",
+			"column":
+            [{"name":"id","type":"long","colNo":0},{"name":"memberId","type":"long","colNo":1},{"name":"thirdpartyType","type":"keyword","colNo":2},{"name":"appId","type":"keyword","colNo":3},{"name":"openId","type":"keyword","colNo":4},{"name":"createdAt","type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS","colNo":5},{"name":"createdBy","type":"keyword","colNo":6},{"name":"updatedAt","type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS","colNo":7},{"name":"updatedBy","type":"keyword","colNo":8},{"name":"lastUpdatedAt","type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS","colNo":9},{"name":"isDeleted","type":"integer","colNo":10}]
+          }
+        }
+      }
+    ]
+  }
+}

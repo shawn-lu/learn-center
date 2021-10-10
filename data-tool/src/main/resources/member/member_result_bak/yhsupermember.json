@@ -1,0 +1,177 @@
+{
+  "common": {
+    "column": {
+      "dateFormat": "yyyy-MM-dd",
+      "datetimeFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+    }
+  },
+  "job": {
+    "setting": {
+      "speed": {
+        "channel": "5"
+      }
+    },
+    "content": [
+      {
+        "reader": {
+          "name": "mysqlreader",
+          "parameter": {
+            "username": "yh_dev",
+            "password": "DvpJe2x",
+            "column": [
+              "id",
+              "id",
+              "member_id",
+              "is_super",
+              "issue_date",
+              "expire_date",
+              "non_reason",
+              "mobile",
+              "created_at",
+              "created_by",
+              "updated_at",
+              "updated_by",
+              "last_updated_at",
+              "seller_id",
+              "city_id",
+              "shop_code",
+              "lift_reason"
+            ],
+            "splitPk": "id",
+            "where": "1 = 1",
+            "connection": [
+              {
+                "table": [
+                  "yh_super_member"
+                ],
+                "jdbcUrl": [
+                  "jdbc:mysql://10.251.77.188:3306/member_center"
+                ]
+              }
+            ]
+          }
+        },
+        "writer": {
+          "name": "es7writer",
+          "parameter": {
+            "address": "10.195.5.32:9200",
+            "username": "elastic",
+            "password": "ak7NEDt41fu43pY6U0J6y1k9",
+            "index": "member_yh_super_member",
+            "autoCreateIndex": false,
+            "dynmaic": false,
+            "settings": {
+              "index": {
+                "number_of_shards": 1,
+                "number_of_replicas": 0,
+                "max_result_window": 200000
+              }
+            },
+            "batchSize": 1000,
+            "column": [
+              {
+                "name": "id",
+                "type": "id"
+              },
+              {
+                "name": "id",
+                "type": "long",
+                "colNo": 0
+              },
+              {
+                "name": "memberId",
+                "type": "long",
+                "colNo": 1
+              },
+              {
+                "name": "isSuper",
+                "type": "integer",
+                "colNo": 2
+              },
+              {
+                "name": "issueDate",
+                "type": "date",
+                "extParamMap": {
+                  "dateFormat": "yyyy-MM-dd"
+                },
+                "colNo": 3
+              },
+              {
+                "name": "expireDate",
+                "type": "date",
+                "extParamMap": {
+                  "dateFormat": "yyyy-MM-dd"
+                },
+                "colNo": 4
+              },
+              {
+                "name": "nonReason",
+                "type": "integer",
+                "colNo": 5
+              },
+              {
+                "name": "mobile",
+                "type": "keyword",
+                "colNo": 6
+              },
+              {
+                "name": "createdAt",
+                "type": "date",
+                "extParamMap": {
+                  "dateFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+                },
+                "colNo": 7
+              },
+              {
+                "name": "createdBy",
+                "type": "keyword",
+                "colNo": 8
+              },
+              {
+                "name": "updatedAt",
+                "type": "date",
+                "extParamMap": {
+                  "dateFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+                },
+                "colNo": 9
+              },
+              {
+                "name": "updatedBy",
+                "type": "keyword",
+                "colNo": 10
+              },
+              {
+                "name": "lastUpdatedAt",
+                "type": "date",
+                "extParamMap": {
+                  "dateFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+                },
+                "colNo": 11
+              },
+              {
+                "name": "sellerId",
+                "type": "keyword",
+                "colNo": 12
+              },
+              {
+                "name": "cityId",
+                "type": "keyword",
+                "colNo": 13
+              },
+              {
+                "name": "shopCode",
+                "type": "keyword",
+                "colNo": 14
+              },
+              {
+                "name": "liftReason",
+                "type": "keyword",
+                "colNo": 15
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

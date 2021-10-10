@@ -1,0 +1,206 @@
+{
+  "common": {
+    "column": {
+      "dateFormat": "yyyy-MM-dd",
+      "datetimeFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+    }
+  },
+  "job": {
+    "setting": {
+      "speed": {
+        "channel": "5"
+      }
+    },
+    "content": [
+      {
+        "reader": {
+          "name": "mysqlreader",
+          "parameter": {
+            "username": "yh_dev",
+            "password": "DvpJe2x",
+            "column": [
+              "id",
+              "account_type",
+              "associate_id",
+              "binding_time",
+              "bravo_user_binding_flag",
+              "bravo_user_flag",
+              "created_at",
+              "created_by",
+              "email",
+              "id",
+              "is_initial_password",
+              "last_updated_at",
+              "member_code",
+              "member_group",
+              "member_no",
+              "member_type",
+              "mobile",
+              "password",
+              "platform",
+              "signup_time",
+              "source",
+              "status",
+              "updated_at",
+              "updated_by",
+              "wechat_openid",
+              "wechat_unionid"
+            ],
+            "splitPk": "id",
+            "where": "1 = 1",
+            "connection": [
+              {
+                "table": [
+                  "yh_member"
+                ],
+                "jdbcUrl": [
+                  "jdbc:mysql://10.251.77.188:3306/member_center"
+                ]
+              }
+            ]
+          }
+        },
+        "writer": {
+          "name": "es7writer",
+          "parameter": {
+            "address": "10.195.5.32:9200",
+            "username": "elastic",
+            "password": "ak7NEDt41fu43pY6U0J6y1k9",
+            "index": "member_yh_member",
+            "autoCreateIndex": false,
+            "dynmaic": false,
+            "settings": {
+              "index": {
+                "number_of_shards": 1,
+                "number_of_replicas": 0,
+                "max_result_window": 200000
+              }
+            },
+            "batchSize": 1000,
+            "column": [
+              {
+                "name": "id",
+                "type": "id"
+              },
+              {
+                "name": "accountType",
+                "type": "long"
+              },
+              {
+                "name": "associateId",
+                "type": "long"
+              },
+              {
+                "name": "bindingTime",
+                "type": "date",
+                "extParamMap": {
+                  "dateFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+                }
+              },
+              {
+                "name": "bravoUserBindingFlag",
+                "type": "INTEGER"
+              },
+              {
+                "name": "bravoUserFlag",
+                "type": "INTEGER"
+              },
+              {
+                "name": "createdAt",
+                "type": "date",
+                "extParamMap": {
+                  "dateFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+                }
+              },
+              {
+                "name": "createdBy",
+                "type": "keyword"
+              },
+              {
+                "name": "email",
+                "type": "keyword"
+              },
+              {
+                "name": "id",
+                "type": "long"
+              },
+              {
+                "name": "isInitialPassword",
+                "type": "boolean"
+              },
+              {
+                "name": "lastUpdatedAt",
+                "type": "date",
+                "extParamMap": {
+                  "dateFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+                }
+              },
+              {
+                "name": "memberCode",
+                "type": "keyword"
+              },
+              {
+                "name": "memberGroup",
+                "type": "INTEGER"
+              },
+              {
+                "name": "memberNo",
+                "type": "INTEGER"
+              },
+              {
+                "name": "memberType",
+                "type": "INTEGER"
+              },
+              {
+                "name": "mobile",
+                "type": "keyword"
+              },
+              {
+                "name": "password",
+                "type": "keyword"
+              },
+              {
+                "name": "platform",
+                "type": "INTEGER"
+              },
+              {
+                "name": "signupTime",
+                "type": "date",
+                "extParamMap": {
+                  "dateFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+                }
+              },
+              {
+                "name": "source",
+                "type": "INTEGER"
+              },
+              {
+                "name": "status",
+                "type": "INTEGER"
+              },
+              {
+                "name": "updatedAt",
+                "type": "date",
+                "extParamMap": {
+                  "dateFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+                }
+              },
+              {
+                "name": "updatedBy",
+                "type": "keyword"
+              },
+              {
+                "name": "wechatOpenid",
+                "type": "keyword"
+              },
+              {
+                "name": "wechatUnionid",
+                "type": "keyword"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
