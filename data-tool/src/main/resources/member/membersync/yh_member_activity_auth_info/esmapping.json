@@ -1,0 +1,74 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "memberId": {
+        "type": "long"
+      },
+      "cardName": {
+        "type": "keyword"
+      },
+      "cardNo": {
+        "type": "keyword"
+      },
+      "cardType": {
+        "type": "integer"
+      },
+      "frontImgType": {
+        "type": "keyword"
+      },
+      "frontImg": {
+        "type": "keyword"
+      },
+      "negativeImgType": {
+        "type": "keyword"
+      },
+      "negativeImg": {
+        "type": "keyword"
+      },
+      "isAuth": {
+        "type": "integer"
+      },
+      "authTime": {
+        "type": "date"
+      },
+      "activityType": {
+        "type": "keyword"
+      },
+      "authChannelType": {
+        "type": "keyword"
+      },
+      "expireTime": {
+        "type": "keyword"
+      },
+      "extendInfo": {
+        "type": "keyword"
+      },
+      "createdAt": {
+        "type": "date"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      },
+      "lastUpdatedAt": {
+        "type": "date"
+      },
+      "isDeleted": {
+        "type": "integer"
+      }
+    }
+  },
+  "settings": {
+    "number_of_shards": "1",
+    "max_result_window": "100000",
+    "number_of_replicas": "1"
+  }
+}

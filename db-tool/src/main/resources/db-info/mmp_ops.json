@@ -1,0 +1,33 @@
+[
+  {
+    "env": "sh-test",
+    "standard": true,
+    "url": "jdbc:mysql://10.251.64.136:3306/mmp_ops_newstage?characterEncoding=utf-8&useSSL=false",
+    "username": "admin",
+    "password": "MMPadmin##2345YHCS",
+    "dbName": "mmp_ops_newstage"
+  },
+  {
+    "env": "sh-prod",
+    "url": "jdbc:mysql://10.247.0.76:3306/mmp_ops?characterEncoding=utf-8&useSSL=false",
+    "username": "yh_mmpops",
+    "password": "YH#MMPops123",
+    "dbName": "mmp_ops"
+  },
+  {
+    "env": "fz-jiaoyi-test",
+    "url": "jdbc:mysql://10.205.0.243:3306/mmp_ops?characterEncoding=utf-8&useSSL=false",
+    "username": "yh_canal",
+    "password": "j8,X/~1;95|8D63D",
+    "dbName": "mmp_ops"
+  },
+  {
+    "env": "fz-jiaoyi-prod",
+    "url": "jdbc:mysql://10.208.133.233:3306/mmp_ops?characterEncoding=utf-8&useSSL=false",
+    "username": "yh_mmpops",
+    "password": "YH#MMPops123",
+    "dbName": "mmp_ops"
+  }
+]
+
+

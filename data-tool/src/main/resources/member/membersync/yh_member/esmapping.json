@@ -1,0 +1,86 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "memberCode": {
+        "type": "keyword"
+      },
+      "mobile": {
+        "type": "keyword"
+      },
+      "email": {
+        "type": "keyword"
+      },
+      "wechatOpenid": {
+        "type": "keyword"
+      },
+      "accountType": {
+        "type": "integer"
+      },
+      "password": {
+        "type": "keyword"
+      },
+      "status": {
+        "type": "integer"
+      },
+      "associateId": {
+        "type": "long"
+      },
+      "createdAt": {
+        "type": "date"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      },
+      "signupTime": {
+        "type": "date"
+      },
+      "wechatUnionid": {
+        "type": "keyword"
+      },
+      "bindingTime": {
+        "type": "date"
+      },
+      "source": {
+        "type": "integer"
+      },
+      "bravoUserFlag": {
+        "type": "integer"
+      },
+      "bravoUserBindingFlag": {
+        "type": "integer"
+      },
+      "memberType": {
+        "type": "integer"
+      },
+      "isInitialPassword": {
+        "type": "boolean"
+      },
+      "memberGroup": {
+        "type": "integer"
+      },
+      "memberNo": {
+        "type": "keyword"
+      },
+      "platform": {
+        "type": "integer"
+      },
+      "lastUpdatedAt": {
+        "type": "date"
+      }
+    }
+  },
+  "settings": {
+    "max_result_window": "100000",
+    "number_of_shards": "1",
+    "number_of_replicas": "1"
+  }
+}

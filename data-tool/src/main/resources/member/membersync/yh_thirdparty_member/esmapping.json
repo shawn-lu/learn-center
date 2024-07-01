@@ -1,0 +1,46 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "memberId": {
+        "type": "long"
+      },
+      "thirdpartyType": {
+        "type": "keyword"
+      },
+      "appId": {
+        "type": "keyword"
+      },
+      "openId": {
+        "type": "keyword"
+      },
+      "createdAt": {
+        "type": "date"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      },
+      "lastUpdatedAt": {
+        "type": "date"
+      },
+      "isDeleted": {
+        "type": "integer"
+      }
+    }
+  },
+  "settings": {
+    "index": {
+      "number_of_shards": "1",
+      "max_result_window": "10000",
+      "number_of_replicas": "1"
+    }
+  }
+}

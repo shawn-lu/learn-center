@@ -1,0 +1,99 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "billNumber": {
+        "type": "keyword"
+      },
+      "memberId": {
+        "type": "long"
+      },
+      "status": {
+        "type": "integer"
+      },
+      "cardType": {
+        "type": "integer"
+      },
+      "amount": {
+        "type": "double"
+      },
+      "periodMonths": {
+        "type": "integer"
+      },
+      "distributionChannel": {
+        "type": "integer"
+      },
+      "shopCode": {
+        "type": "keyword"
+      },
+      "payMode": {
+        "type": "keyword"
+      },
+      "invitationCode": {
+        "type": "keyword"
+      },
+      "longitude": {
+        "type": "keyword"
+      },
+      "latitude": {
+        "type": "keyword"
+      },
+      "refundAmount": {
+        "type": "double"
+      },
+      "refundOperator": {
+        "type": "keyword"
+      },
+      "refundWay": {
+        "type": "integer"
+      },
+      "refundDate": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "refundedFlag": {
+        "type": "integer"
+      },
+      "refundType": {
+        "type": "integer"
+      },
+      "periodDays": {
+        "type": "integer"
+      },
+      "promoAmount": {
+        "type": "double"
+      },
+      "sellerId": {
+        "type": "keyword"
+      },
+      "cityId": {
+        "type": "keyword"
+      },
+      "createdAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      },
+      "lastUpdatedAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      }
+    }
+  },
+  "settings": {
+    "number_of_shards": "1",
+    "max_result_window": "100000",
+    "number_of_replicas": "1"
+  }
+}

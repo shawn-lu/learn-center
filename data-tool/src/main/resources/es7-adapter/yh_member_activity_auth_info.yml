@@ -1,0 +1,23 @@
+dataSourceKey: defaultDS
+destination: yh-member-activity-auth-info-binlog
+groupId: group_yh-member-activity-auth-info
+outerAdapterKey: yh_member_activity_auth_info-es7-key
+esMapping:
+  _index: member_yh_member_activity_auth_info
+  _id: _id
+  sql: select a.id as _id,a.id as id,a.member_id as memberId,a.card_name as cardName,a.card_no
+    as cardNo,a.card_type as cardType,a.front_img as frontImg,a.front_img_type as
+    frontImgType,a.negative_img as negativeImg,a.negative_img_type as negativeImgType,a.is_auth
+    as isAuth,a.auth_time as authTime,a.activity_type as activityType,a.auth_channel_type
+    as authChannelType,a.expire_time as expireTime,a.extend_info as extendInfo,a.is_deleted
+    as isDeleted,a.created_at as createdAt,a.created_by as createdBy,a.updated_at
+    as updatedAt,a.updated_by as updatedBy,a.last_updated_at as lastUpdatedAt,a.id
+    as _id,a.id as id,a.member_id as memberId,a.card_name as cardName,a.card_no as
+    cardNo,a.card_type as cardType,a.front_img as frontImg,a.front_img_type as frontImgType,a.negative_img
+    as negativeImg,a.negative_img_type as negativeImgType,a.is_auth as isAuth,a.auth_time
+    as authTime,a.activity_type as activityType,a.auth_channel_type as authChannelType,a.expire_time
+    as expireTime,a.extend_info as extendInfo,a.is_deleted as isDeleted,a.created_at
+    as createdAt,a.created_by as createdBy,a.updated_at as updatedAt,a.updated_by
+    as updatedBy,a.last_updated_at as lastUpdatedAt from yh_member_activity_auth_info
+    a
+  commitBatch: 3000

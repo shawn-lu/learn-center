@@ -11,13 +11,13 @@
     　　　　
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
         　　　　　　　　
-        <file>/Users/luxufeng/work/code/learn-center/testFile.log</file>
+        <file>/Users/luxufeng/work/githubspace/learn-center/testFile2.log</file>
         　　　　　　　　
         <append>true</append>
         　　　　　　　　
         <encoder>
             　　　　　　　　　　
-            <pattern>%-4relative [%d{yyyy-MM-dd HH:mm:ss.SSS}] %-5level %logger{35} - %msg%n</pattern>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] %msg%n</pattern>
             　　　　　　　　
         </encoder>
         　　　　　　

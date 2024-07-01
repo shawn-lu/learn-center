@@ -1,0 +1,74 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "memberId": {
+        "type": "long"
+      },
+      "requestId": {
+        "type": "keyword"
+      },
+      "mobile": {
+        "type": "keyword"
+      },
+      "operation": {
+        "type": "keyword"
+      },
+      "ip": {
+        "type": "keyword"
+      },
+      "deviceId": {
+        "type": "keyword"
+      },
+      "platform": {
+        "type": "keyword"
+      },
+      "version": {
+        "type": "keyword"
+      },
+      "channel": {
+        "type": "keyword"
+      },
+      "timestamp": {
+        "type": "date"
+      },
+      "resultFlag": {
+        "type": "integer"
+      },
+      "cityId": {
+        "type": "integer"
+      },
+      "shopId": {
+        "type": "keyword"
+      },
+      "latitude": {
+        "type": "keyword"
+      },
+      "longitude": {
+        "type": "keyword"
+      },
+      "createdAt": {
+        "type": "date"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      },
+      "lastUpdatedAt": {
+        "type": "date"
+      }
+    }
+  },
+  "settings": {
+    "number_of_shards": "1",
+    "max_result_window": "100000",
+    "number_of_replicas": "1"
+  }
+}

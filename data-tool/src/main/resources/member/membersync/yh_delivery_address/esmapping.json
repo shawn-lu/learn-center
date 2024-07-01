@@ -1,0 +1,86 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "memberId": {
+        "type": "long"
+      },
+      "gender": {
+        "type": "keyword"
+      },
+      "name": {
+        "type": "keyword"
+      },
+      "phone": {
+        "type": "keyword"
+      },
+      "province": {
+        "type": "keyword"
+      },
+      "city": {
+        "type": "keyword"
+      },
+      "address": {
+        "type": "keyword"
+      },
+      "details": {
+        "type": "keyword"
+      },
+      "alias": {
+        "type": "keyword"
+      },
+      "longitude": {
+        "type": "keyword"
+      },
+      "latitude": {
+        "type": "keyword"
+      },
+      "shopId": {
+        "type": "keyword"
+      },
+      "isDefault": {
+        "type": "boolean"
+      },
+      "shopAssociatedAt": {
+        "type": "date"
+      },
+      "partnerId": {
+        "type": "integer"
+      },
+      "partnerAssociatedAt": {
+        "type": "date"
+      },
+      "district": {
+        "type": "keyword"
+      },
+      "cityId": {
+        "type": "long"
+      },
+      "channel": {
+        "type": "keyword"
+      },
+      "createdAt": {
+        "type": "date"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      },
+      "lastUpdatedAt": {
+        "type": "date"
+      }
+    }
+  },
+  "settings": {
+    "number_of_shards": "1",
+    "max_result_window": "100000",
+    "number_of_replicas": "1"
+  }
+}

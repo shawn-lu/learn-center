@@ -1,0 +1,178 @@
+表:yh_member
+索引:member_yh_member
+mappings: {"properties":{"id":{"type":"long"},"memberCode":{"type":"keyword"},"mobile":{"type":"keyword"},"email":{"type":"keyword"},"wechatOpenid":{"type":"keyword"},"accountType":{"type":"long"},"password":{"type":"keyword"},"status":{"type":"integer"},"associateId":{"type":"long"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"signupTime":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"wechatUnionid":{"type":"keyword"},"bindingTime":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"source":{"type":"integer"},"bravoUserFlag":{"type":"integer"},"bravoUserBindingFlag":{"type":"integer"},"memberType":{"type":"integer"},"isInitialPassword":{"type":"integer"},"memberGroup":{"type":"integer"},"memberNo":{"type":"keyword"},"platform":{"type":"integer"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+表:t_member
+索引:member_t_member
+mappings:
+{"properties":{"id":{"type":"long"},"platform":{"type":"integer"},"memberId":{"type":"long"},"memberNo":{"type":"keyword"},"memberType":{"type":"keyword"},"memberStatus":{"type":"keyword"},"idType":{"type":"keyword"},"idNo":{"type":"keyword"},"sex":{"type":"keyword"},"birthday":{"type":"date","format":"yyyy-MM-dd"},"email":{"type":"keyword"},"mobile":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"userName":{"type":"keyword"},"aliasName":{"type":"keyword"},"openId":{"type":"keyword"},"qq":{"type":"keyword"},"signupTime":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"checkPhoneFlag":{"type":"integer"},"signupCity":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+表:t_member_mobile
+索引:member_t_member_mobile
+mappings:
+{"properties":{"id":{"type":"long"},"platform":{"type":"integer"},"memberId":{"type":"long"},"memberNo":{"type":"keyword"},"mobile":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+表:yh_super_member
+索引:member_yh_super_member
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"isSuper":{"type":"integer"},"issueDate":{"type":"date","format":"yyyy-MM-dd"},"expireDate":{"type":"date","format":"yyyy-MM-dd"},"nonReason":{"type":"integer"},"mobile":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"sellerId":{"type":"keyword"},"cityId":{"type":"keyword"},"shopCode":{"type":"keyword"},"liftReason":{"type":"keyword"}}}
+
+表:yh_virtual_member
+索引:member_yh_virtual_member
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"shopId":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+表:yh_auth_member_info
+索引:member_yh_auth_member_info
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"realName":{"type":"keyword"},"idCardNo":{"type":"keyword"},"idCardType":{"type":"integer"},"isAuth":{"type":"integer"},"authPlatform":{"type":"keyword"},"authTime":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"isDeleted":{"type":"integer"}}}
+
+
+表:yh_member_activity_auth_info
+索引:member_yh_member_activity_auth_info
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"cardName":{"type":"keyword"},"cardNo":{"type":"keyword"},"cardType":{"type":"integer"},"frontImgType":{"type":"keyword"},"frontImg":{"type":"keyword"},"negativeImgType":{"type":"keyword"},"negativeImg":{"type":"keyword"},"isAuth":{"type":"integer"},"authTime":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"activityType":{"type":"keyword"},"authChannelType":{"type":"keyword"},"expireTime":{"type":"keyword"},"extendInfo":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"isDeleted":{"type":"integer"}}}
+
+
+表:yh_member_alipay
+索引:member_yh_member_alipay
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"appId":{"type":"keyword"},"openId":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+
+
+表:yh_member_wechat
+索引:member_yh_member_wechat
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"appId":{"type":"keyword"},"openId":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+表:yh_thirdparty_member
+索引:member_yh_thirdparty_member
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"thirdpartyType":{"type":"keyword"},"appId":{"type":"keyword"},"openId":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"isDeleted":{"type":"integer"}}}
+
+
+表:yh_thirdparty_member_card
+索引:member_yh_thirdparty_member_card
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"cardId":{"type":"keyword"},"cardCode":{"type":"keyword"},"source":{"type":"integer"},"openid":{"type":"keyword"},"unionid":{"type":"keyword"},"mobile":{"type":"keyword"},"outerStr":{"type":"keyword"},"importFlag":{"type":"integer"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+表:yh_market_channel
+索引:member_yh_market_channel
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"operationChannelId":{"type":"integer"},"operationAppChannel":{"type":"keyword"},"customizationReferenceId":{"type":"keyword"},"mainChannelId":{"type":"keyword"},"mainChannelName":{"type":"keyword"},"secondaryChannelId":{"type":"keyword"},"secondaryChannelName":{"type":"keyword"},"channelRemark":{"type":"keyword"},"marketResult":{"type":"integer"},"isDeleted":{"type":"integer"},"marketAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+
+
+表:t_member_card
+索引:member_t_member_card
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"platform":{"type":"integer"},"memberNo":{"type":"keyword"},"cardNo":{"type":"keyword"},"cardType":{"type":"keyword"},"cardStatus":{"type":"keyword"},"shopId":{"type":"keyword"},"issueDate":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"expiredDate":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+
+表:yh_member_information
+索引:member_yh_member_information
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"gender":{"type":"integer"},"mobile":{"type":"keyword"},"email":{"type":"keyword"},"nickname":{"type":"keyword"},"logo":{"type":"keyword"},"wechatOpenid":{"type":"keyword"},"wechatNickname":{"type":"keyword"},"wechatLogo":{"type":"keyword"},"birthday":{"type":"date","format":"yyyy-MM-dd"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+表:yh_delivery_address
+索引:member_yh_delivery_address
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"gender":{"type":"keyword"},"name":{"type":"keyword"},"phone":{"type":"keyword"},"province":{"type":"keyword"},"city":{"type":"keyword"},"address":{"type":"keyword"},"details":{"type":"keyword"},"alias":{"type":"keyword"},"longitude":{"type":"keyword"},"latitude":{"type":"keyword"},"shopId":{"type":"keyword"},"isDefault":{"type":"integer"},"shopAssociatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"partnerId":{"type":"integer"},"partnerAssociatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"district":{"type":"keyword"},"cityId":{"type":"integer"},"channel":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+表:yh_unionid_member
+索引:member_yh_unionid_member
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"unionId":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+
+表:t_member_channel
+索引:member_t_member_channel
+mappings:
+{"properties":{"id":{"type":"long"},"platform":{"type":"integer"},"memberId":{"type":"long"},"memberNo":{"type":"keyword"},"channel":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+
+表:yh_operation_channel
+索引:member_yh_operation_channel
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"operateType":{"type":"keyword"},"operationAppChannel":{"type":"keyword"},,"sellerId":{"type":"keyword"},"cityId":{"type":"keyword"},"shopId":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+
+表:yh_market_channel_meta
+索引:member_yh_market_channel_meta
+mappings:
+{"properties":{"id":{"type":"long"},"mainChannelId":{"type":"keyword"},"mainChannelName":{"type":"keyword"},"secondaryChannelId":{"type":"keyword"},"secondaryChannelName":{"type":"keyword"},"isDeleted":{"type":"byte"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+表:yh_member_rights_setting
+索引:member_yh_member_rights_setting
+mappings:
+{"properties":{"id":{"type":"long"},"rightsCode":{"type":"keyword"},"isOpen":{"type":"byte"},"sellerId":{"type":"keyword"},"cityId":{"type":"keyword"},"shopId":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+表:yh_member_extend_config
+索引:member_yh_member_extend_config
+mappings:
+{"properties":{"id":{"type":"long"},"bizCode":{"type":"keyword"},"bizDesc":{"type":"keyword"},"valueType":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+
+表:yh_member_operation
+索引:member_yh_member_operation
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"requestId":{"type":"keyword"},"mobile":{"type":"keyword"},,"operation":{"type":"keyword"},"ip":{"type":"keyword"},"deviceId":{"type":"keyword"},"platform":{"type":"keyword"},"version":{"type":"keyword"},"channel":{"type":"keyword"},"timestamp":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"resultFlag":{"type":"integer"},"cityId":{"type":"integer"},"shopId":{"type":"keyword"},"latitude":{"type":"keyword"},"longitude":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+表:yh_coupon_packet_bill
+索引:member_yh_coupon_packet_bill
+mappings:
+{"properties":{"id":{"type":"long"},"billNumber":{"type":"keyword"},"packetCode":{"type":"keyword"},"memberId":{"type":"long"},"status":{"type":"integer"},"distributionChannel":{"type":"integer"},"sendCouponStatus":{"type":"integer"},"amount":{"type":"double"},"shopCode":{"type":"keyword"},"company":{"type":"keyword"},"payMode":{"type":"keyword"},"refundedFlag":{"type":"integer"},"refundAmount":{"type":"double"},"refundOperator":{"type":"keyword"},"refundWay":{"type":"integer"},"refundDate":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"longitude":{"type":"keyword"},"latitude":{"type":"keyword"},"invitationCode":{"type":"keyword"},"addressId":{"type":"long"},"contactName":{"type":"keyword"},"contactPhone":{"type":"keyword"},"province":{"type":"keyword"},"city":{"type":"keyword"},"district":{"type":"keyword"},"details":{"type":"keyword"},"isGift":{"type":"integer"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+表:yh_super_member_operation
+索引:member_yh_super_member_operation
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"billId":{"type":"long"},"type":{"type":"byte"},"cardType":{"type":"byte"},"cardPrice":{"type":"double"},"validDays":{"type":"integer"},"issueDate":{"type":"date","format":"yyyy-MM-dd"},"expireDate":{"type":"date","format":"yyyy-MM-dd"},"refunded":{"type":"integer"},"sellerId":{"type":"keyword"},"cityId":{"type":"keyword"},"shopCode":{"type":"keyword"},"lastIssueCouponsAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+表:yh_tob_member_operation
+索引:member_yh_tob_member_operation
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"operation":{"type":"keyword"},"message":{"type":"keyword"},"resultFlag":{"type":"byte"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+表:yh_member_unregister
+索引:member_yh_member_unregister
+mappings:
+{"properties":{"id":{"type":"long"},"memberId":{"type":"long"},"commentText":{"type":"keyword"},"commentOptions":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+表:yh_dues_bill
+索引:member_yh_dues_bill
+mappings:
+{"properties":{"id":{"type":"long"},"billNumber":{"type":"keyword"},"memberId":{"type":"long"},"status":{"type":"integer"},"cardType":{"type":"integer"},"amount":{"type":"double"},"periodMonths":{"type":"integer"},"distributionChannel":{"type":"integer"},"shopCode":{"type":"keyword"},"payMode":{"type":"keyword"},"invitationCode":{"type":"keyword"},"longitude":{"type":"keyword"},"latitude":{"type":"keyword"},"refundAmount":{"type":"double"},"refundOperator":{"type":"keyword"},"refundWay":{"type":"integer"},"refundDate":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"refundedFlag":{"type":"integer"},"refundType":{"type":"integer"},"periodDays":{"type":"integer"},"promoAmount":{"type":"double"},"sellerId":{"type":"keyword"},"cityId":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+
+
+表:yh_dues_bill_ext
+索引:member_yh_dues_bill_ext
+mappings:
+{"properties":{"id":{"type":"long"},"duesBillId":{"type":"long"},"duesBillNumber":{"type":"keyword"},"memberId":{"type":"long"},"orderId":{"type":"long"},"parentOrderId":{"type":"long"},"sellerId":{"type":"keyword"},"cityId":{"type":"keyword"},"createdAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"createdBy":{"type":"keyword"},"updatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"},"updatedBy":{"type":"keyword"},"lastUpdatedAt":{"type":"date","format":"yyyy-MM-dd HH:mm:ss:SSS"}}}
+
+yh_dues_bill
+yh_dues_bill_ext
+yh_tob_member_operation
+
+yh_member_unregister
+
+yh_super_member_operation
+yh_coupon_packet_bill

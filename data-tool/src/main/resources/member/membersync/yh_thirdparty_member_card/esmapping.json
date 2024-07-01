@@ -1,0 +1,59 @@
+{
+  "mappings": {
+    "properties": {
+      "cardCode": {
+        "type": "keyword"
+      },
+      "cardId": {
+        "type": "keyword"
+      },
+      "createdAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "long"
+      },
+      "importFlag": {
+        "type": "integer"
+      },
+      "lastUpdatedAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "memberId": {
+        "type": "long"
+      },
+      "mobile": {
+        "type": "keyword"
+      },
+      "openid": {
+        "type": "keyword"
+      },
+      "outerStr": {
+        "type": "keyword"
+      },
+      "source": {
+        "type": "integer"
+      },
+      "unionid": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      }
+    }
+  },
+  "settings": {
+    "number_of_shards": "1",
+    "max_result_window": "100000",
+    "number_of_replicas": "1"
+  }
+}

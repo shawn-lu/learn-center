@@ -1,0 +1,17 @@
+dataSourceKey: defaultDS
+destination: yh-auth-member-info-binlog
+esMapping:
+  _index: member_yh_auth_member_info
+  _id: _id
+  sql: select a.id as _id,a.member_id as memberId,a.real_name as realName,a.id_card_no
+    as idCardNo,a.id_card_type as idCardType,a.is_auth as isAuth,a.auth_time as authTime,a.auth_platform
+    as authPlatform,a.is_deleted as isDeleted,a.created_at as createdAt,a.created_by
+    as createdBy,a.updated_at as updatedAt,a.updated_by as updatedBy,a.last_updated_at
+    as lastUpdatedAt,a.id as _id,a.member_id as memberId,a.real_name as realName,a.id_card_no
+    as idCardNo,a.id_card_type as idCardType,a.is_auth as isAuth,a.auth_time as authTime,a.auth_platform
+    as authPlatform,a.is_deleted as isDeleted,a.created_at as createdAt,a.created_by
+    as createdBy,a.updated_at as updatedAt,a.updated_by as updatedBy,a.last_updated_at
+    as lastUpdatedAt from yh_auth_member_info a
+  commitBatch: 3000
+groupId: group_yh-auth-member-info
+outerAdapterKey: yh_auth_member_info-es7-key

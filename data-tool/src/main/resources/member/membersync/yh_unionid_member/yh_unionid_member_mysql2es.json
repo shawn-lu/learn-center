@@ -1,0 +1,114 @@
+{
+  "common": {
+    "column": {
+      "dateFormat": "yyyy-MM-dd",
+      "datetimeFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+    }
+  },
+  "job": {
+    "content": [
+      {
+        "reader": {
+          "parameter": {
+            "password": "DvpJe2x",
+            "column": [
+              "id",
+              "id",
+              "member_id",
+              "union_id",
+              "created_at",
+              "created_by",
+              "updated_at",
+              "updated_by",
+              "last_updated_at"
+            ],
+            "where": "1 = 1",
+            "connection": [
+              {
+                "jdbcUrl": [
+                  "jdbc:mysql://10.251.77.188:3306/member_center"
+                ],
+                "table": [
+                  "yh_unionid_member"
+                ]
+              }
+            ],
+            "splitPk": "id",
+            "username": "yh_dev"
+          },
+          "name": "mysqlreader"
+        },
+        "writer": {
+          "parameter": {
+            "settings": {
+              "index": {
+                "number_of_shards": 1,
+                "max_result_window": 200000,
+                "number_of_replicas": 0
+              }
+            },
+            "password": "ak7NEDt41fu43pY6U0J6y1k9",
+            "address": "10.195.5.32:9200",
+            "column": [
+              {
+                "name": "id",
+                "type": "id"
+              },
+              {
+                "colNo": 0,
+                "name": "id",
+                "type": "long"
+              },
+              {
+                "colNo": 1,
+                "name": "memberId",
+                "type": "long"
+              },
+              {
+                "colNo": 2,
+                "name": "unionId",
+                "type": "keyword"
+              },
+              {
+                "colNo": 3,
+                "name": "createdAt",
+                "type": "date"
+              },
+              {
+                "colNo": 4,
+                "name": "createdBy",
+                "type": "keyword"
+              },
+              {
+                "colNo": 5,
+                "name": "updatedAt",
+                "type": "date"
+              },
+              {
+                "colNo": 6,
+                "name": "updatedBy",
+                "type": "keyword"
+              },
+              {
+                "colNo": 7,
+                "name": "lastUpdatedAt",
+                "type": "date"
+              }
+            ],
+            "index": "member_yh_unionid_member",
+            "autoCreateIndex": false,
+            "batchSize": 1000,
+            "dynmaic": false,
+            "username": "elastic"
+          },
+          "name": "es7writer"
+        }
+      }
+    ],
+    "setting": {
+      "speed": {
+        "channel": "5"
+      }
+    }
+  }
+}

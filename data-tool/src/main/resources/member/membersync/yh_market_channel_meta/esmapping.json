@@ -1,0 +1,44 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "mainChannelId": {
+        "type": "keyword"
+      },
+      "mainChannelName": {
+        "type": "keyword"
+      },
+      "secondaryChannelId": {
+        "type": "keyword"
+      },
+      "secondaryChannelName": {
+        "type": "keyword"
+      },
+      "isDeleted": {
+        "type": "byte"
+      },
+      "createdAt": {
+        "type": "date"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      },
+      "lastUpdatedAt": {
+        "type": "date"
+      }
+    }
+  },
+  "settings": {
+    "number_of_shards": "1",
+    "max_result_window": "100000",
+    "number_of_replicas": "1"
+  }
+}

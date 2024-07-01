@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+
+    <property name="pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </layout>
+    </appender>
+    <!-- error日志 appender -->
+<!--    <appender name="file.async.error" class="ch.qos.logback.classic.AsyncAppender">-->
+<!--        <discardingThreshold>0</discardingThreshold>-->
+<!--        <queueSize>256</queueSize>-->
+<!--        <includeCallerData>true</includeCallerData>-->
+
+<!--        <appender class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+<!--            <prudent>true</prudent>-->
+<!--            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--                <fileNamePattern>${LOG_FILE_PATH:-/data/dms-rocketmq-web/log}/%d{yyyy-MM-dd}.error.log</fileNamePattern>-->
+<!--                <maxHistory>2</maxHistory>-->
+<!--            </rollingPolicy>-->
+<!--            <encoder>-->
+<!--                <charset>UTF-8</charset>-->
+<!--                <pattern>${pattern}</pattern>-->
+<!--            </encoder>-->
+<!--            <filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+<!--                <level>ERROR</level>-->
+<!--                <onMatch>ACCEPT</onMatch>-->
+<!--                <onMismatch>DENY</onMismatch>-->
+<!--            </filter>-->
+<!--        </appender>-->
+<!--    </appender>-->
+
+
+<!--    &lt;!&ndash; info日志 appender &ndash;&gt;-->
+<!--    <appender name="file.async.info" class="ch.qos.logback.classic.AsyncAppender">-->
+<!--        <discardingThreshold>0</discardingThreshold>-->
+<!--        <queueSize>256</queueSize>-->
+<!--        <includeCallerData>true</includeCallerData>-->
+
+<!--        <appender class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+<!--            <prudent>true</prudent>-->
+<!--            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--                <fileNamePattern>${LOG_FILE_PATH:-/data/dms-rocketmq-web/log}/%d{yyyy-MM-dd}.info.log</fileNamePattern>-->
+<!--                <maxHistory>2</maxHistory>-->
+<!--            </rollingPolicy>-->
+<!--            <encoder>-->
+<!--                <charset>UTF-8</charset>-->
+<!--                <pattern>${pattern}</pattern>-->
+<!--            </encoder>-->
+<!--            <filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+<!--                <level>ERROR</level>-->
+<!--                <onMatch>DENY</onMatch>-->
+<!--                <onMismatch>ACCEPT</onMismatch>-->
+<!--            </filter>-->
+<!--        </appender>-->
+<!--    </appender>-->
+
+
+    <!-- 配置日志logger属性 -->
+    <root level="INFO">
+        <!--        <appender-ref ref="file.async.error"/>-->
+        <!--        <appender-ref ref="file.async.info"/>-->
+        <appender-ref ref="STDOUT" />
+    </root>
+
+    <!--    <logger name="RocketmqClient" additivity="false">-->
+    <!--        <level value="ERROR" />-->
+    <!--        <appender-ref ref="STDOUT"/>-->
+    <!--    </logger>-->
+
+    <!--    <logger name="RocketmqRemoting" additivity="false">-->
+    <!--        <level value="ERROR" />-->
+    <!--        <appender-ref ref="STDOUT"/>-->
+    <!--    </logger>-->
+
+
+</configuration>

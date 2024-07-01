@@ -1,0 +1,18 @@
+dataSourceKey: defaultDS
+destination: yh-member-information-binlog
+esMapping:
+  _index: member_yh_member_information
+  _id: _id
+  sql: select a.id as _id,a.member_id as memberId,a.gender as gender,a.birthday as
+    birthday,a.mobile as mobile,a.email as email,a.nickname as nickname,a.logo as
+    logo,a.wechat_openid as wechatOpenid,a.wechat_nickname as wechatNickname,a.wechat_logo
+    as wechatLogo,a.created_at as createdAt,a.created_by as createdBy,a.updated_at
+    as updatedAt,a.updated_by as updatedBy,a.last_updated_at as lastUpdatedAt,a.id
+    as _id,a.member_id as memberId,a.gender as gender,a.birthday as birthday,a.mobile
+    as mobile,a.email as email,a.nickname as nickname,a.logo as logo,a.wechat_openid
+    as wechatOpenid,a.wechat_nickname as wechatNickname,a.wechat_logo as wechatLogo,a.created_at
+    as createdAt,a.created_by as createdBy,a.updated_at as updatedAt,a.updated_by
+    as updatedBy,a.last_updated_at as lastUpdatedAt from yh_member_information a
+  commitBatch: 3000
+groupId: group_yh-member-information
+outerAdapterKey: yh_member_information-es7-key

@@ -1,0 +1,624 @@
+{
+  "job": {
+    "setting": {
+      "speed": {
+        "channel": 5
+      }
+    },
+    "content": [
+      {
+        "reader": {
+          "name": "mysqlreader",
+          "parameter": {
+            "username": "admin",
+            "password": "Sfioao*fo123",
+            "column": [
+              "job_id",
+              "spec_code",
+              "customer_code",
+              "customer_name",
+              "amount",
+              "price",
+              "department_category",
+              "billing_group",
+              "temp_level",
+              "sku_group_code",
+              "is_gift",
+              "parent_line_no",
+              "load_supplier_code",
+              "load_supplier_name",
+              "process_type",
+              "store_location",
+              "station_code",
+              "warehouse_code",
+              "pwh_name",
+              "is_cs_order",
+              "erp_original_no",
+              "serial_number",
+              "receipt_number",
+              "receipt_total_qty",
+              "lot01",
+              "lot02",
+              "lot03",
+              "lot04",
+              "lot05",
+              "lot06",
+              "lot07",
+              "lot08",
+              "lot09",
+              "lot10",
+              "lot11",
+              "lot12",
+              "def1",
+              "def2",
+              "def3",
+              "def4",
+              "def5",
+              "def6",
+              "def7",
+              "def8",
+              "def9",
+              "def10",
+              "remark",
+              "rec_ver",
+              "creator",
+              "create_time",
+              "modifier",
+              "modify_time",
+              "rec_status",
+              "time_zone",
+              "org_id",
+              "job_id",
+              "logistics_do_no",
+              "logistics_do_line_no",
+              "is_merge",
+              "dosys_no",
+              "dosys_line_do",
+              "dosys_key_no",
+              "data_source",
+              "logistics_do_type",
+              "associate_no",
+              "associate_no2",
+              "tag_id",
+              "logistics_no",
+              "logistics_line_no",
+              "upstream_no",
+              "upstream_line_no",
+              "customer_no",
+              "customer_line_no",
+              "logistics_task_id",
+              "logistics_task_line_no",
+              "rev_upi_no",
+              "pallet_no",
+              "container_no",
+              "trans_task_no",
+              "dispatch_no",
+              "main_driver",
+              "vehicle_card",
+              "carrier_code",
+              "carrier_name",
+              "logistics_type_code",
+              "business_type_code",
+              "sku_code",
+              "sku_name",
+              "outside_sku_code",
+              "outside_sku_name",
+              "inventory_type",
+              "inventory_status",
+              "sku_bar_code",
+              "pack_code",
+              "uom",
+              "do_op",
+              "do_time",
+              "uom_qty",
+              "qty_plan",
+              "qty_plan_ea",
+              "qty_do",
+              "qty_do_ea",
+              "qty_ea",
+              "supplier_code",
+              "supplier_name",
+              "reason_code",
+              "gross_weight",
+              "volume",
+              "consignee_code",
+              "consignee_name",
+              "owner_code",
+              "owner_name",
+              "union_customer_code",
+              "receipte_time"
+            ],
+            "splitPk": "job_id",
+            "connection": [
+              {
+                "table": [
+                  "om_logistics_do_detail"
+                ],
+                "jdbcUrl": [
+                  "jdbc:mysql://10.251.78.34:3306/otb_dev"
+                ]
+              }
+            ]
+          }
+        },
+        "writer": {
+          "name": "es7writer",
+          "parameter": {
+            "username": "elastic",
+            "password": "ak7NEDt41fu43pY6U0J6y1k9",
+            "address": "10.195.5.32:9200",
+            "index": "om_logistics_do_detail",
+            "autoCreateIndex": false,
+            "batchSize": 1000,
+            "dynmaic": false,
+            "column": [
+              {
+                "name": "job_id",
+                "type": "id"
+              },
+              {
+                "name": "specCode",
+                "type": "text"
+              },
+              {
+                "name": "customerCode",
+                "type": "keyword"
+              },
+              {
+                "name": "customerName",
+                "type": "text"
+              },
+              {
+                "name": "amount",
+                "type": "double"
+              },
+              {
+                "name": "price",
+                "type": "double"
+              },
+              {
+                "name": "departmentCategory",
+                "type": "text"
+              },
+              {
+                "name": "billingGroup",
+                "type": "text"
+              },
+              {
+                "name": "tempLevel",
+                "type": "text"
+              },
+              {
+                "name": "skuGroupCode",
+                "type": "text"
+              },
+              {
+                "name": "isGift",
+                "type": "text"
+              },
+              {
+                "name": "parentLineNo",
+                "type": "text"
+              },
+              {
+                "name": "loadSupplierCode",
+                "type": "text"
+              },
+              {
+                "name": "loadSupplierName",
+                "type": "text"
+              },
+              {
+                "name": "processType",
+                "type": "text"
+              },
+              {
+                "name": "storeLocation",
+                "type": "text"
+              },
+              {
+                "name": "stationCode",
+                "type": "keyword"
+              },
+              {
+                "name": "warehouseCode",
+                "type": "keyword"
+              },
+              {
+                "name": "pwhName",
+                "type": "text"
+              },
+              {
+                "name": "isCsOrder",
+                "type": "text"
+              },
+              {
+                "name": "erpOriginalNo",
+                "type": "text"
+              },
+              {
+                "name": "serialNumber",
+                "type": "text"
+              },
+              {
+                "name": "receiptNumber",
+                "type": "double"
+              },
+              {
+                "name": "receiptTotalQty",
+                "type": "double"
+              },
+              {
+                "name": "lot01",
+                "type": "date",
+                "format": "yyyy-MM-dd HH:mm:ss"
+              },
+              {
+                "name": "lot02",
+                "type": "date",
+                "format": "yyyy-MM-dd HH:mm:ss"
+              },
+              {
+                "name": "lot03",
+                "type": "date",
+                "format": "yyyy-MM-dd HH:mm:ss"
+              },
+              {
+                "name": "lot04",
+                "type": "text"
+              },
+              {
+                "name": "lot05",
+                "type": "text"
+              },
+              {
+                "name": "lot06",
+                "type": "text"
+              },
+              {
+                "name": "lot07",
+                "type": "text"
+              },
+              {
+                "name": "lot08",
+                "type": "text"
+              },
+              {
+                "name": "lot09",
+                "type": "text"
+              },
+              {
+                "name": "lot10",
+                "type": "text"
+              },
+              {
+                "name": "lot11",
+                "type": "double"
+              },
+              {
+                "name": "lot12",
+                "type": "double"
+              },
+              {
+                "name": "def1",
+                "type": "text"
+              },
+              {
+                "name": "def2",
+                "type": "keyword"
+              },
+              {
+                "name": "def3",
+                "type": "text"
+              },
+              {
+                "name": "def4",
+                "type": "text"
+              },
+              {
+                "name": "def5",
+                "type": "text"
+              },
+              {
+                "name": "def6",
+                "type": "text"
+              },
+              {
+                "name": "def7",
+                "type": "text"
+              },
+              {
+                "name": "def8",
+                "type": "text"
+              },
+              {
+                "name": "def9",
+                "type": "text"
+              },
+              {
+                "name": "def10",
+                "type": "text"
+              },
+              {
+                "name": "remark",
+                "type": "text"
+              },
+              {
+                "name": "recVer",
+                "type": "text"
+              },
+              {
+                "name": "creator",
+                "type": "keyword"
+              },
+              {
+                "name": "createTime",
+                "type": "date",
+                "format": "yyyy-MM-dd HH:mm:ss"
+              },
+              {
+                "name": "modifier",
+                "type": "text"
+              },
+              {
+                "name": "modifyTime",
+                "type": "date",
+                "format": "yyyy-MM-dd HH:mm:ss"
+              },
+              {
+                "name": "recStatus",
+                "type": "long"
+              },
+              {
+                "name": "timeZone",
+                "type": "text"
+              },
+              {
+                "name": "orgId",
+                "type": "keyword"
+              },
+              {
+                "name": "jobId",
+                "type": "long"
+              },
+              {
+                "name": "logisticsDoNo",
+                "type": "keyword"
+              },
+              {
+                "name": "logisticsDoLineNo",
+                "type": "keyword"
+              },
+              {
+                "name": "isMerge",
+                "type": "text"
+              },
+              {
+                "name": "doSysNo",
+                "type": "text"
+              },
+              {
+                "name": "doSysLineDo",
+                "type": "text"
+              },
+              {
+                "name": "doSysKeyNo",
+                "type": "text"
+              },
+              {
+                "name": "dataSource",
+                "type": "text"
+              },
+              {
+                "name": "logisticsDoType",
+                "type": "keyword"
+              },
+              {
+                "name": "associateNo",
+                "type": "text"
+              },
+              {
+                "name": "associateNo2",
+                "type": "keyword"
+              },
+              {
+                "name": "tagId",
+                "type": "text"
+              },
+              {
+                "name": "logisticsNo",
+                "type": "text"
+              },
+              {
+                "name": "logisticsLineNo",
+                "type": "text"
+              },
+              {
+                "name": "upstreamNo",
+                "type": "keyword"
+              },
+              {
+                "name": "upstreamLineNo",
+                "type": "text"
+              },
+              {
+                "name": "customerNo",
+                "type": "text"
+              },
+              {
+                "name": "customerLineNo",
+                "type": "text"
+              },
+              {
+                "name": "logisticsTaskId",
+                "type": "keyword"
+              },
+              {
+                "name": "logisticsTaskLineNo",
+                "type": "text"
+              },
+              {
+                "name": "revUpiNo",
+                "type": "text"
+              },
+              {
+                "name": "palletNo",
+                "type": "text"
+              },
+              {
+                "name": "containerNo",
+                "type": "text"
+              },
+              {
+                "name": "transTaskNo",
+                "type": "text"
+              },
+              {
+                "name": "dispatchNo",
+                "type": "text"
+              },
+              {
+                "name": "mainDriver",
+                "type": "text"
+              },
+              {
+                "name": "vehicleCard",
+                "type": "text"
+              },
+              {
+                "name": "carrierCode",
+                "type": "text"
+              },
+              {
+                "name": "carrierName",
+                "type": "text"
+              },
+              {
+                "name": "logisticsTypeCode",
+                "type": "keyword"
+              },
+              {
+                "name": "businessTypeCode",
+                "type": "text"
+              },
+              {
+                "name": "skuCode",
+                "type": "keyword"
+              },
+              {
+                "name": "skuName",
+                "type": "text"
+              },
+              {
+                "name": "outsideSkuCode",
+                "type": "keyword"
+              },
+              {
+                "name": "outsideSkuName",
+                "type": "text"
+              },
+              {
+                "name": "inventoryType",
+                "type": "keyword"
+              },
+              {
+                "name": "inventoryStatus",
+                "type": "keyword"
+              },
+              {
+                "name": "skuBarcode",
+                "type": "text"
+              },
+              {
+                "name": "packCode",
+                "type": "text"
+              },
+              {
+                "name": "uom",
+                "type": "text"
+              },
+              {
+                "name": "doOpName",
+                "type": "text"
+              },
+              {
+                "name": "doTime",
+                "type": "date",
+                "format": "yyyy-MM-dd HH:mm:ss"
+              },
+              {
+                "name": "uomQty",
+                "type": "double"
+              },
+              {
+                "name": "qtyPlan",
+                "type": "double"
+              },
+              {
+                "name": "qtyPlanEa",
+                "type": "double"
+              },
+              {
+                "name": "qtyDo",
+                "type": "double"
+              },
+              {
+                "name": "qtyDoEa",
+                "type": "double"
+              },
+              {
+                "name": "qtyEa",
+                "type": "double"
+              },
+              {
+                "name": "supplierCode",
+                "type": "keyword"
+              },
+              {
+                "name": "supplierName",
+                "type": "text"
+              },
+              {
+                "name": "reasonCode",
+                "type": "text"
+              },
+              {
+                "name": "grossWeight",
+                "type": "double"
+              },
+              {
+                "name": "volume",
+                "type": "double"
+              },
+              {
+                "name": "consigneeCode",
+                "type": "keyword"
+              },
+              {
+                "name": "consigneeName",
+                "type": "text"
+              },
+              {
+                "name": "ownerCode",
+                "type": "keyword"
+              },
+              {
+                "name": "ownerName",
+                "type": "text"
+              },
+              {
+                "name": "unionCustomerCode",
+                "type": "text"
+              },
+              {
+                "name": "receipteTime",
+                "type": "date",
+                "format": "yyyy-MM-dd HH:mm:ss"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

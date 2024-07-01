@@ -1,0 +1,44 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "rightsCode": {
+        "type": "keyword"
+      },
+      "isOpen": {
+        "type": "byte"
+      },
+      "sellerId": {
+        "type": "keyword"
+      },
+      "cityId": {
+        "type": "keyword"
+      },
+      "shopId": {
+        "type": "keyword"
+      },
+      "createdAt": {
+        "type": "date"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      },
+      "lastUpdatedAt": {
+        "type": "date"
+      }
+    }
+  },
+  "settings": {
+    "number_of_shards": "1",
+    "max_result_window": "100000",
+    "number_of_replicas": "1"
+  }
+}

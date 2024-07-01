@@ -1,0 +1,53 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "duesBillId": {
+        "type": "long"
+      },
+      "duesBillNumber": {
+        "type": "keyword"
+      },
+      "memberId": {
+        "type": "long"
+      },
+      "orderId": {
+        "type": "long"
+      },
+      "parentOrderId": {
+        "type": "long"
+      },
+      "sellerId": {
+        "type": "keyword"
+      },
+      "cityId": {
+        "type": "keyword"
+      },
+      "createdAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      },
+      "lastUpdatedAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      }
+    }
+  },
+  "settings": {
+    "number_of_shards": "1",
+    "max_result_window": "100000",
+    "number_of_replicas": "1"
+  }
+}

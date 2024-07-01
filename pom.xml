@@ -28,6 +28,10 @@
         <module>kafka-demo</module>
         <module>disruptor-learn</module>
         <module>data-tool</module>
+        <module>es-demo</module>
+        <module>mqtt-demo</module>
+        <module>db-tool</module>
+        <module>apollo-client-demo</module>
     </modules>
 
     <properties>

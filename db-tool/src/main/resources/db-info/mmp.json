@@ -1,0 +1,101 @@
+[
+  {
+    "env": "sh-debug",
+    "standard": true,
+    "url": "jdbc:mysql://10.251.77.235:3306/mmp?characterEncoding=utf-8&useSSL=false",
+    "username": "yh_dev",
+    "password": "DvpJe2x",
+    "dbName": "mmp_debug"
+  },
+  {
+    "env": "sh-dev",
+    "url": "jdbc:mysql://10.251.77.235:3306/mmp?characterEncoding=utf-8&useSSL=false",
+    "username": "yh_dev",
+    "password": "DvpJe2x",
+    "dbName": "mmp"
+  },
+  {
+    "env": "sh-sit",
+    "url": "jdbc:mysql://mysql069-sit.mid.io:2069/mmp?characterEncoding=utf-8&useSSL=false",
+    "username": "yh_dev",
+    "password": "X520inzWrG7skGTa",
+    "dbName": "mmp"
+  },
+  {
+    "env": "otb-pet",
+    "url": "jdbc:mysql://mysql069-sit.mid.io:2069/mmp_pet?characterEncoding=utf-8&useSSL=false",
+    "username": "yh_dev",
+    "password": "X520inzWrG7skGTa",
+    "dbName": "mmp_pet"
+  },
+  {
+    "env": "fz-mw-dev",
+    "url": "jdbc:mysql://10.205.0.250:3306/mmp?characterEncoding=utf-8&useSSL=false",
+    "username": "yh_dev",
+    "password": "DvpJe2x",
+    "dbName": "mmp"
+  },
+  {
+    "env": "fz-mw-sit",
+    "url": "jdbc:mysql://10.205.0.75:3307/mmp?characterEncoding=utf-8&useSSL=false",
+    "username": "flyway",
+    "password": "I0U1Bdw8uVWy",
+    "dbName": "mmp"
+  },
+  {
+    "env": "fz-bigdata-dev",
+    "url": "jdbc:mysql://10.0.71.161:3306/mmp?characterEncoding=utf-8&useSSL=false",
+    "username": "galaxy_dev",
+    "password": "Ol*lfjnladsf",
+    "dbName": "mmp"
+  },
+  {
+    "env": "fz-bigdata-sit",
+    "url": "jdbc:mysql://10.0.71.161:3306/mmp_sit?characterEncoding=utf-8&useSSL=false",
+    "username": "galaxy_dev",
+    "password": "Ol*lfjnladsf",
+    "dbName": "mmp_sit"
+  },
+  {
+    "env": "fz-bigdata-prod",
+    "url": "jdbc:mysql://10.0.38.142:3306/mmp?characterEncoding=utf-8&useSSL=false",
+    "username": "mmp",
+    "password": "I*90falllJHKfh1",
+    "dbName": "mmp"
+  },
+  {
+    "env": "sh-prod",
+    "url": "jdbc:mysql://10.247.0.76:3306/mmp?characterEncoding=utf-8&useSSL=false",
+    "username": "yh_mmp",
+    "password": "MMp93#xC6",
+    "dbName": "mmp"
+  },
+  {
+    "env": "fzmw-prod",
+    "url": "jdbc:mysql://10.208.133.233:3306/mmp?characterEncoding=utf-8&useSSL=false",
+    "username": "yh_mmp",
+    "password": "MMp93#xC6",
+    "dbName": "mmp"
+  },
+  {
+    "env": "fz-ck-prod",
+    "url": "jdbc:mysql://10.215.1.230:4030/mmp?characterEncoding=utf-8&useSSL=false",
+    "username": "mmp_user",
+    "password": "LSXfLCB6d2X2rsMTmrwN",
+    "dbName": "mmp"
+  },
+  {
+    "env": "fzmw-common-prod",
+    "url": "jdbc:mysql://10.208.133.233:3306/mmp_common?characterEncoding=utf-8&useSSL=false",
+    "username": "yh_mmp",
+    "password": "MMp93#xC6",
+    "dbName": "mmp_common"
+  },
+  {
+    "env": "fzck-otb-uat",
+    "url": "jdbc:mysql://10.210.50.169:30061/mmp?characterEncoding=utf-8&useSSL=false",
+    "username": "yhfz-prod",
+    "password": "DvpJe2x",
+    "dbName": "mmp"
+  }
+]

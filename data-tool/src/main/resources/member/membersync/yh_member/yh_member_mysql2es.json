@@ -1,0 +1,191 @@
+{
+  "common": {
+    "column": {
+      "dateFormat": "yyyy-MM-dd",
+      "datetimeFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+    }
+  },
+  "job": {
+    "content": [
+      {
+        "reader": {
+          "parameter": {
+            "password": "DvpJe2x",
+            "column": [
+              "id",
+              "id",
+              "member_code",
+              "mobile",
+              "email",
+              "wechat_openid",
+              "account_type",
+              "password",
+              "status",
+              "associate_id",
+              "created_at",
+              "created_by",
+              "updated_at",
+              "updated_by",
+              "signup_time",
+              "wechat_unionid",
+              "binding_time",
+              "source",
+              "bravo_user_flag",
+              "bravo_user_binding_flag",
+              "member_type",
+              "is_initial_password",
+              "member_group",
+              "member_no",
+              "platform",
+              "last_updated_at"
+            ],
+            "where": "1 = 1",
+            "connection": [
+              {
+                "jdbcUrl": [
+                  "jdbc:mysql://10.251.77.188:3306/member_center"
+                ],
+                "table": [
+                  "yh_member"
+                ]
+              }
+            ],
+            "splitPk": "id",
+            "username": "yh_dev"
+          },
+          "name": "mysqlreader"
+        },
+        "writer": {
+          "parameter": {
+            "settings": {
+              "index": {
+                "number_of_shards": 1,
+                "max_result_window": 200000,
+                "number_of_replicas": 0
+              }
+            },
+            "password": "ak7NEDt41fu43pY6U0J6y1k9",
+            "address": "10.195.5.32:9200",
+            "column": [
+              {
+                "name": "id",
+                "type": "id"
+              },
+              {
+                "name": "id",
+                "type": "long"
+              },
+              {
+                "name": "memberCode",
+                "type": "keyword"
+              },
+              {
+                "name": "mobile",
+                "type": "keyword"
+              },
+              {
+                "name": "email",
+                "type": "keyword"
+              },
+              {
+                "name": "wechatOpenid",
+                "type": "keyword"
+              },
+              {
+                "name": "accountType",
+                "type": "integer"
+              },
+              {
+                "name": "password",
+                "type": "keyword"
+              },
+              {
+                "name": "status",
+                "type": "integer"
+              },
+              {
+                "name": "associateId",
+                "type": "long"
+              },
+              {
+                "name": "createdAt",
+                "type": "date"
+              },
+              {
+                "name": "createdBy",
+                "type": "keyword"
+              },
+              {
+                "name": "updatedAt",
+                "type": "date"
+              },
+              {
+                "name": "updatedBy",
+                "type": "keyword"
+              },
+              {
+                "name": "signupTime",
+                "type": "date"
+              },
+              {
+                "name": "wechatUnionid",
+                "type": "keyword"
+              },
+              {
+                "name": "bindingTime",
+                "type": "date"
+              },
+              {
+                "name": "source",
+                "type": "integer"
+              },
+              {
+                "name": "bravoUserFlag",
+                "type": "integer"
+              },
+              {
+                "name": "bravoUserBindingFlag",
+                "type": "integer"
+              },
+              {
+                "name": "memberType",
+                "type": "integer"
+              },
+              {
+                "name": "isInitialPassword",
+                "type": "boolean"
+              },
+              {
+                "name": "memberGroup",
+                "type": "integer"
+              },
+              {
+                "name": "memberNo",
+                "type": "keyword"
+              },
+              {
+                "name": "platform",
+                "type": "integer"
+              },
+              {
+                "name": "lastUpdatedAt",
+                "type": "date"
+              }
+            ],
+            "index": "member_yh_member",
+            "autoCreateIndex": false,
+            "batchSize": 1000,
+            "dynmaic": false,
+            "username": "elastic"
+          },
+          "name": "es7writer"
+        }
+      }
+    ],
+    "setting": {
+      "speed": {
+        "channel": "5"
+      }
+    }
+  }
+}

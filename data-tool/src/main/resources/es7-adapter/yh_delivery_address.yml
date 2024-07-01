@@ -1,0 +1,23 @@
+dataSourceKey: defaultDS
+destination: yh-delivery-address-binlog
+groupId: group_yh-delivery-address
+outerAdapterKey: yh_delivery_address-es7-key
+esMapping:
+  _index: member_yh_delivery_address
+  _id: _id
+  sql: select a.id as _id,a.id as id,a.member_id as memberId,a.name as name,a.gender
+    as gender,a.phone as phone,a.province as province,a.city as city,a.district as
+    district,a.address as address,a.details as details,a.alias as alias,a.longitude
+    as longitude,a.latitude as latitude,a.is_default as isDefault,a.created_at as
+    createdAt,a.shop_id as shopId,a.shop_associated_at as shopAssociatedAt,a.partner_id
+    as partnerId,a.partner_associated_at as partnerAssociatedAt,a.last_updated_at
+    as lastUpdatedAt,a.city_id as cityId,a.channel as channel,a.created_by as createdBy,a.updated_at
+    as updatedAt,a.updated_by as updatedBy,a.id as _id,a.id as id,a.member_id as memberId,a.name
+    as name,a.gender as gender,a.phone as phone,a.province as province,a.city as city,a.district
+    as district,a.address as address,a.details as details,a.alias as alias,a.longitude
+    as longitude,a.latitude as latitude,a.is_default as isDefault,a.created_at as
+    createdAt,a.shop_id as shopId,a.shop_associated_at as shopAssociatedAt,a.partner_id
+    as partnerId,a.partner_associated_at as partnerAssociatedAt,a.last_updated_at
+    as lastUpdatedAt,a.city_id as cityId,a.channel as channel,a.created_by as createdBy,a.updated_at
+    as updatedAt,a.updated_by as updatedBy from yh_delivery_address a
+  commitBatch: 3000

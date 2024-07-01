@@ -1,0 +1,219 @@
+server:
+  port: 8081
+spring:
+  jackson:
+    date-format: yyyy-MM-dd'T'HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: non_null
+canal.conf:
+  mode: rocketMQ
+  flatMessage: true
+  syncBatchSize: 1000
+  retries: 0
+  consumerProperties:
+    rocketmq.namesrv.addr: rocketmq-ns-dev.mid.io:9876
+    rocketmq.batch.size: 1000
+    rocketmq.enable.message.trace: false
+srcDataSources:
+  url: jdbc:mysql://10.251.77.188:3306/member_center?useUnicode=true
+  username: yh_dev
+  password: DvpJe2x
+canalAdapters:
+- instance: t-member-binlog
+  groups:
+  - groupId: group_t-member
+    outerAdapters:
+    - name: es7
+      key: t_member-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: t-member-card-binlog
+  groups:
+  - groupId: group_t-member-card
+    outerAdapters:
+    - name: es7
+      key: t_member_card-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: t-member-mobile-binlog
+  groups:
+  - groupId: group_t-member-mobile
+    outerAdapters:
+    - name: es7
+      key: t_member_mobile-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: yh-auth-member-info-binlog
+  groups:
+  - groupId: group_yh-auth-member-info
+    outerAdapters:
+    - name: es7
+      key: yh_auth_member_info-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: yh-delivery-address-binlog
+  groups:
+  - groupId: group_yh-delivery-address
+    outerAdapters:
+    - name: es7
+      key: yh_delivery_address-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: yh-member-activity-auth-info-binlog
+  groups:
+  - groupId: group_yh-member-activity-auth-info
+    outerAdapters:
+    - name: es7
+      key: yh_member_activity_auth_info-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: yh-member-alipay-binlog
+  groups:
+  - groupId: group_yh-member-alipay
+    outerAdapters:
+    - name: es7
+      key: yh_member_alipay-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: yh-member-binlog
+  groups:
+  - groupId: group_yh-member
+    outerAdapters:
+    - name: es7
+      key: yh_member-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: yh-member-information-binlog
+  groups:
+  - groupId: group_yh-member-information
+    outerAdapters:
+    - name: es7
+      key: yh_member_information-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: yh-member-wechat-binlog
+  groups:
+  - groupId: group_yh-member-wechat
+    outerAdapters:
+    - name: es7
+      key: yh_member_wechat-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: yh-super-member-binlog
+  groups:
+  - groupId: group_yh-super-member
+    outerAdapters:
+    - name: es7
+      key: yh_super_member-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: yh-thirdparty-member-binlog
+  groups:
+  - groupId: group_yh-thirdparty-member
+    outerAdapters:
+    - name: es7
+      key: yh_thirdparty_member-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: yh-unionid-member-binlog
+  groups:
+  - groupId: group_yh-unionid-member
+    outerAdapters:
+    - name: es7
+      key: yh_unionid_member-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: yh-virtual-member-binlog
+  groups:
+  - groupId: group_yh-virtual-member
+    outerAdapters:
+    - name: es7
+      key: yh_virtual_member-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: yh-market-channel-meta-binlog
+  groups:
+  - groupId: group_yh-market-channel-meta
+    outerAdapters:
+    - name: es7
+      key: yh_market_channel_meta-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: yh-member-rights-setting-binlog
+  groups:
+  - groupId: group_yh-member-rights-setting
+    outerAdapters:
+    - name: es7
+      key: yh_member_rights_setting-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: yh-member-extend-config-binlog
+  groups:
+  - groupId: group_yh-member-extend-config
+    outerAdapters:
+    - name: es7
+      key: yh_member_extend_config-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search
+- instance: yh-member-unregister-binlog
+  groups:
+  - groupId: group_yh-member-unregister
+    outerAdapters:
+    - name: es7
+      key: yh_member_unregister-es7-key
+      hosts: es7101-dev.mid.io:9200
+      properties:
+        mode: rest
+        security.auth: elastic:ak7NEDt41fu43pY6U0J6y1k9
+        cluster.name: hlwyf-search

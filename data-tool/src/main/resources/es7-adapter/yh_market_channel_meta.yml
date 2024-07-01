@@ -1,0 +1,17 @@
+dataSourceKey: defaultDS
+destination: yh-market-channel-meta-binlog
+groupId: group_yh-market-channel-meta
+outerAdapterKey: yh_market_channel_meta-es7-key
+esMapping:
+  _index: member_yh_market_channel_meta
+  _id: _id
+  sql: select a.id as _id,a.id as id,a.main_channel_id as mainChannelId,a.main_channel_name
+    as mainChannelName,a.secondary_channel_id as secondaryChannelId,a.secondary_channel_name
+    as secondaryChannelName,a.is_deleted as isDeleted,a.created_at as createdAt,a.created_by
+    as createdBy,a.updated_at as updatedAt,a.updated_by as updatedBy,a.last_updated_at
+    as lastUpdatedAt,a.id as _id,a.id as id,a.main_channel_id as mainChannelId,a.main_channel_name
+    as mainChannelName,a.secondary_channel_id as secondaryChannelId,a.secondary_channel_name
+    as secondaryChannelName,a.is_deleted as isDeleted,a.created_at as createdAt,a.created_by
+    as createdBy,a.updated_at as updatedAt,a.updated_by as updatedBy,a.last_updated_at
+    as lastUpdatedAt from yh_market_channel_meta a
+  commitBatch: 3000

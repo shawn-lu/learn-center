@@ -1,0 +1,123 @@
+{
+  "common": {
+    "column": {
+      "dateFormat": "yyyy-MM-dd",
+      "datetimeFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+    }
+  },
+  "job": {
+    "content": [
+      {
+        "reader": {
+          "parameter": {
+            "username": "t9Vyj8M+VWyM8a+wwQKdTg==",
+            "password": "rfpK+8Rc5IAEBt6R8SsNrw==",
+            "column": [
+              "id",
+              "id",
+              "member_id",
+              "union_id",
+              "created_at",
+              "created_by",
+              "updated_at",
+              "updated_by",
+              "last_updated_at"
+            ],
+            "where": "1 = 1",
+            "connection": [
+              {
+                "jdbcUrl": [
+                  "jdbc:mysql://10.247.9.164:3306/member_center"
+                ],
+                "table": [
+                  "yh_unionid_member"
+                ]
+              }
+            ],
+            "splitPk": "id"
+          },
+          "name": "mysqlreader"
+        },
+        "writer": {
+          "parameter": {
+            "settings": {
+              "index": {
+                "number_of_shards": 16,
+                "max_result_window": 10000,
+                "number_of_replicas": 1
+              }
+            },
+            "username": "elastic",
+            "password": "qcOl8siL95H3q6Hh333Y6N9m",
+            "address": "10.196.66.232:9200",
+            "autoCreateIndex": false,
+            "batchSize": 1000,
+            "index": "member_yh_unionid_member",
+            "dynmaic": false,
+            "column": [
+              {
+                "name": "id",
+                "type": "id"
+              },
+              {
+                "colNo": 0,
+                "name": "id",
+                "type": "long"
+              },
+              {
+                "colNo": 1,
+                "name": "memberId",
+                "type": "long"
+              },
+              {
+                "colNo": 2,
+                "name": "unionId",
+                "type": "keyword"
+              },
+              {
+                "colNo": 3,
+                "name": "createdAt",
+                "type": "date"
+              },
+              {
+                "colNo": 4,
+                "name": "createdBy",
+                "type": "keyword"
+              },
+              {
+                "colNo": 5,
+                "name": "updatedAt",
+                "type": "date"
+              },
+              {
+                "colNo": 6,
+                "name": "updatedBy",
+                "type": "keyword"
+              },
+              {
+                "colNo": 7,
+                "name": "lastUpdatedAt",
+                "type": "date"
+              }
+            ]
+          },
+          "name": "es7writer"
+        }
+      }
+    ],
+    "setting": {
+      "speed": {
+        "channel": "10"
+      }
+    },
+    "core": {
+      "transport": {
+        "channel": {
+          "speed": {
+            "record": "100000"
+          }
+        }
+      }
+    }
+  }
+}

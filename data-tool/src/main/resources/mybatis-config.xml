@@ -12,9 +12,9 @@
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <property name="url"
-                          value="jdbc:mysql://10.251.78.27:3306/yh_srm_suppliercenter_test?autoReconnect=true&amp;useUnicode=true&amp;zeroDateTimeBehavior=convertToNull"/>
-                <property name="username" value="bhd"/>
-                <property name="password" value="SDFjOOSOjf1$$****"/>
+                          value="jdbc:mysql://10.251.77.188:3306/member_center?autoReconnect=true&amp;useUnicode=true&amp;zeroDateTimeBehavior=convertToNull"/>
+                <property name="username" value="yh_dev"/>
+                <property name="password" value="DvpJe2x"/>
             </dataSource>
         </environment>
     </environments>

@@ -1,0 +1,59 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "memberId": {
+        "type": "long"
+      },
+      "isSuper": {
+        "type": "boolean"
+      },
+      "issueDate": {
+        "type": "date"
+      },
+      "expireDate": {
+        "type": "date"
+      },
+      "nonReason": {
+        "type": "integer"
+      },
+      "mobile": {
+        "type": "keyword"
+      },
+      "createdAt": {
+        "type": "date"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      },
+      "lastUpdatedAt": {
+        "type": "date"
+      },
+      "sellerId": {
+        "type": "keyword"
+      },
+      "cityId": {
+        "type": "keyword"
+      },
+      "shopCode": {
+        "type": "keyword"
+      },
+      "liftReason": {
+        "type": "keyword"
+      }
+    }
+  },
+  "settings": {
+    "number_of_shards": "1",
+    "max_result_window": "100000",
+    "number_of_replicas": "1"
+  }
+}

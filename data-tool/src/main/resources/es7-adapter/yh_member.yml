@@ -1,0 +1,26 @@
+dataSourceKey: defaultDS
+destination: yh-member-binlog
+groupId: group_yh-member
+outerAdapterKey: yh_member-es7-key
+esMapping:
+  _index: member_yh_member
+  _id: _id
+  sql: select a.id as _id,a.id as id,a.member_code as memberCode,a.mobile as mobile,a.email
+    as email,a.wechat_openid as wechatOpenid,a.account_type as accountType,a.password
+    as password,a.status as status,a.associate_id as associateId,a.signup_time as
+    signupTime,a.created_at as createdAt,a.created_by as createdBy,a.updated_at as
+    updatedAt,a.updated_by as updatedBy,a.wechat_unionid as wechatUnionid,a.binding_time
+    as bindingTime,a.last_updated_at as lastUpdatedAt,a.source as source,a.bravo_user_flag
+    as bravoUserFlag,a.bravo_user_binding_flag as bravoUserBindingFlag,a.member_type
+    as memberType,a.is_initial_password as isInitialPassword,a.member_group as memberGroup,a.member_no
+    as memberNo,a.platform as platform,a.agent_support_tag as agentSupportTag,a.id
+    as _id,a.id as id,a.member_code as memberCode,a.mobile as mobile,a.email as email,a.wechat_openid
+    as wechatOpenid,a.account_type as accountType,a.password as password,a.status
+    as status,a.associate_id as associateId,a.signup_time as signupTime,a.created_at
+    as createdAt,a.created_by as createdBy,a.updated_at as updatedAt,a.updated_by
+    as updatedBy,a.wechat_unionid as wechatUnionid,a.binding_time as bindingTime,a.last_updated_at
+    as lastUpdatedAt,a.source as source,a.bravo_user_flag as bravoUserFlag,a.bravo_user_binding_flag
+    as bravoUserBindingFlag,a.member_type as memberType,a.is_initial_password as isInitialPassword,a.member_group
+    as memberGroup,a.member_no as memberNo,a.platform as platform,a.agent_support_tag
+    as agentSupportTag from yh_member a
+  commitBatch: 3000

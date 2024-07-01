@@ -1,0 +1,65 @@
+server:
+  port: 8080
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: non_null
+  project:
+    name: csc
+  application:
+    name: yh-xuandu-canal-consumer
+  profiles:
+    active: PRO
+  jmx:
+    enabled: false
+
+env: ${spring.profiles.active}
+logback:
+  kafka:
+    servers: kfk-srv-3.pro.yonghui.cn:9092,kfk-srv-2.pro.yonghui.cn:9092,kfk-srv-1.pro.yonghui.cn:9092
+    topic: operation-${spring.application.name}
+app.id: csc--yh-xuandu-canal-consumer
+apollo:
+  # 开发DEV：http://apollo-dev-sh.yonghui.cn:8080,http://apollo-dev-fz.yonghui.cn:8080
+  # 测试SIT：http://apollo-sit-sh.yonghui.cn:8080,http://apollo-sit-fz.yonghui.cn:8080
+  # 预发UAT：http://apollo-uat-sh.yonghui.cn:8080,http://apollo-uat-fz.yonghui.cn:8080
+  meta: http://apollo-pro-sh.yonghui.cn:8080,http://apollo-pro-fz.yonghui.cn:8080
+  cacheDir: /opt/data/apollo-cache
+  cluster: SH
+  bootstrap:
+    enabled: true
+    namespaces: ${xuandu_namespace}
+    eagerLoad.enabled: true
+canal.conf:
+  mode: kafka
+  mqServers: 10.251.70.17:9092,10.251.70.97:9092,10.251.70.63:9092
+  flatMessage:
+  batchSize: 100
+  syncBatchSize: 1000
+  retries: 3
+  timeout: 60000
+  srcDataSources:
+    configServer:
+      url: jdbc:mysql://10.251.70.35:3306/canal_manage?useUnicode=true&useSSL=false
+      username: admin
+      password: 50FiggN8PDHW7ga6oSE3!
+      maxActive: 20
+    bhd_suppliercenter:
+      url: jdbc:mysql://10.196.68.249:3306/yh_srm_suppliercenter_prod?useUnicode=true&useSSL=false
+      username: ro_yh_srm_suppliercenter
+      password: SDJii*SDJjlfl123
+      useDelayConnect: true
+  targetDataSources:
+    cgztES:
+      name: es
+      hosts: 10.251.80.16:9300,10.251.80.23:9300,10.251.80.47:9300,10.251.80.27:9300,10.251.80.31:9300,110.251.80.41:9300,10.251.80.48:9300
+      properties:
+        cluster.name: YHS-CGZT-ESCLUSTER
+  canalAdapters:
+    - instance: prod_bhd_suppliercenter_base_supplier_purchasing_info
+      groups:
+        - groupId: supplycenter
+          key: grp_bhd_supplier_purchase_info
+          needProccessor: true
+          targetKey: cgztES

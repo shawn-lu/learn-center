@@ -1,0 +1,127 @@
+{
+  "job": {
+    "setting": {
+      "speed": {
+        "channel": "5"
+      }
+    },
+    "content": [
+      {
+        "reader": {
+          "name": "mysqlreader",
+          "parameter": {
+            "username": "yh_dev",
+            "password": "DvpJe2x",
+            "column": [
+              "id",
+              "main_channel_id",
+              "main_channel_name",
+              "secondary_channel_id",
+              "secondary_channel_name",
+              "is_deleted",
+              "created_at",
+              "created_by",
+              "updated_at",
+              "updated_by",
+              "last_updated_at"
+            ],
+            "splitPk": "id",
+            "connection": [
+              {
+                "table": [
+                  "yh_market_channel_meta"
+                ],
+                "jdbcUrl": [
+                  "jdbc:mysql://10.251.77.188:3306/member_center"
+                ]
+              }
+            ]
+          }
+        },
+        "writer": {
+          "name": "elasticsearchwriter",
+          "parameter": {
+            "flatToNested": true,
+            "endpoint": "http://10.195.5.32:9200",
+            "accessId": "elastic",
+            "accessKey": "ak7NEDt41fu43pY6U0J6y1k9",
+            "index": "member_yh_market_channel_meta",
+            "type": "",
+            "cleanup": true,
+            "settings": {
+              "index": {
+                "number_of_shards": 1,
+                "number_of_replicas": 0
+              }
+            },
+            "discovery": false,
+            "batchSize": 1000,
+            "splitter": ",",
+            "column": [
+              [
+                {
+                  "name": "id",
+                  "type": "long",
+                  "colNo": 0
+                },
+                {
+                  "name": "mainChannelId",
+                  "type": "keyword",
+                  "colNo": 1
+                },
+                {
+                  "name": "mainChannelName",
+                  "type": "keyword",
+                  "colNo": 2
+                },
+                {
+                  "name": "secondaryChannelId",
+                  "type": "keyword",
+                  "colNo": 3
+                },
+                {
+                  "name": "secondaryChannelName",
+                  "type": "keyword",
+                  "colNo": 4
+                },
+                {
+                  "name": "isDeleted",
+                  "type": "byte",
+                  "colNo": 5
+                },
+                {
+                  "name": "createdAt",
+                  "type": "date",
+                  "format": "yyyy-MM-dd HH:mm:ss:SSS",
+                  "colNo": 6
+                },
+                {
+                  "name": "createdBy",
+                  "type": "keyword",
+                  "colNo": 7
+                },
+                {
+                  "name": "updatedAt",
+                  "type": "date",
+                  "format": "yyyy-MM-dd HH:mm:ss:SSS",
+                  "colNo": 8
+                },
+                {
+                  "name": "updatedBy",
+                  "type": "keyword",
+                  "colNo": 9
+                },
+                {
+                  "name": "lastUpdatedAt",
+                  "type": "date",
+                  "format": "yyyy-MM-dd HH:mm:ss:SSS",
+                  "colNo": 10
+                }
+              ]
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

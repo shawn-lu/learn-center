@@ -1,0 +1,16 @@
+dataSourceKey: defaultDS
+destination: yh-thirdparty-member-binlog
+groupId: group_yh-thirdparty-member
+outerAdapterKey: yh_thirdparty_member-es7-key
+esMapping:
+  _index: member_yh_thirdparty_member
+  _id: _id
+  sql: select a.id as _id,a.id as id,a.member_id as memberId,a.thirdparty_type as
+    thirdpartyType,a.app_id as appId,a.open_id as openId,a.is_deleted as isDeleted,a.created_at
+    as createdAt,a.created_by as createdBy,a.updated_at as updatedAt,a.updated_by
+    as updatedBy,a.last_updated_at as lastUpdatedAt,a.id as _id,a.id as id,a.member_id
+    as memberId,a.thirdparty_type as thirdpartyType,a.app_id as appId,a.open_id as
+    openId,a.is_deleted as isDeleted,a.created_at as createdAt,a.created_by as createdBy,a.updated_at
+    as updatedAt,a.updated_by as updatedBy,a.last_updated_at as lastUpdatedAt from
+    yh_thirdparty_member a
+  commitBatch: 3000

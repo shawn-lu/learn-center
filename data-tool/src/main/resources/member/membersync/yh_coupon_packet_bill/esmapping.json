@@ -1,0 +1,111 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "billNumber": {
+        "type": "keyword"
+      },
+      "packetCode": {
+        "type": "keyword"
+      },
+      "memberId": {
+        "type": "long"
+      },
+      "status": {
+        "type": "integer"
+      },
+      "distributionChannel": {
+        "type": "integer"
+      },
+      "sendCouponStatus": {
+        "type": "integer"
+      },
+      "amount": {
+        "type": "double"
+      },
+      "shopCode": {
+        "type": "keyword"
+      },
+      "company": {
+        "type": "keyword"
+      },
+      "payMode": {
+        "type": "keyword"
+      },
+      "refundedFlag": {
+        "type": "integer"
+      },
+      "refundAmount": {
+        "type": "double"
+      },
+      "refundOperator": {
+        "type": "keyword"
+      },
+      "refundWay": {
+        "type": "integer"
+      },
+      "refundDate": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "longitude": {
+        "type": "keyword"
+      },
+      "latitude": {
+        "type": "keyword"
+      },
+      "invitationCode": {
+        "type": "keyword"
+      },
+      "addressId": {
+        "type": "long"
+      },
+      "contactName": {
+        "type": "keyword"
+      },
+      "contactPhone": {
+        "type": "keyword"
+      },
+      "province": {
+        "type": "keyword"
+      },
+      "city": {
+        "type": "keyword"
+      },
+      "district": {
+        "type": "keyword"
+      },
+      "details": {
+        "type": "keyword"
+      },
+      "isGift": {
+        "type": "integer"
+      },
+      "createdAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      },
+      "lastUpdatedAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      }
+    }
+  },
+  "settings": {
+    "number_of_shards": "1",
+    "max_result_window": "100000",
+    "number_of_replicas": "1"
+  }
+}

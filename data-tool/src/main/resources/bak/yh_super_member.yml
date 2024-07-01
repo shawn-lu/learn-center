@@ -1,0 +1,19 @@
+dataSourceKey: defaultDS
+destination: yh-super-member-binlog
+esMapping:
+  _index: member_yh_super_member
+  _id: _id
+  sql: select a.id as _id,a.member_id as memberId,a.is_super as isSuper,a.issue_date
+    as issueDate,a.expire_date as expireDate,a.non_reason as nonReason,a.mobile as
+    mobile,a.created_at as createdAt,a.created_by as createdBy,a.updated_at as updatedAt,a.updated_by
+    as updatedBy,a.last_updated_at as lastUpdatedAt,a.city_id as cityId,a.seller_id
+    as sellerId,a.shop_code as shopCode,a.lift_reason as liftReason,a.old_seller_config
+    as oldSellerConfig,a.id as _id,a.member_id as memberId,a.is_super as isSuper,a.issue_date
+    as issueDate,a.expire_date as expireDate,a.non_reason as nonReason,a.mobile as
+    mobile,a.created_at as createdAt,a.created_by as createdBy,a.updated_at as updatedAt,a.updated_by
+    as updatedBy,a.last_updated_at as lastUpdatedAt,a.city_id as cityId,a.seller_id
+    as sellerId,a.shop_code as shopCode,a.lift_reason as liftReason,a.old_seller_config
+    as oldSellerConfig from yh_super_member a
+  commitBatch: 3000
+groupId: group_yh-super-member
+outerAdapterKey: yh_super_member-es7-key

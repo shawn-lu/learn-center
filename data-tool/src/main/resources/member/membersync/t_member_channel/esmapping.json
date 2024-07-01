@@ -1,0 +1,37 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "platform": {
+        "type": "integer"
+      },
+      "memberId": {
+        "type": "long"
+      },
+      "memberNo": {
+        "type": "keyword"
+      },
+      "channel": {
+        "type": "keyword"
+      },
+      "createdAt": {
+        "type": "date"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "lastUpdatedAt": {
+        "type": "date"
+      }
+    }
+  },
+  "settings": {
+    "index": {
+      "number_of_shards": "1",
+      "max_result_window": "100000",
+      "number_of_replicas": "1"
+    }
+  }
+}

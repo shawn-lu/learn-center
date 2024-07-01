@@ -1,0 +1,106 @@
+{
+  "common": {
+    "column": {
+      "dateFormat": "yyyy-MM-dd",
+      "datetimeFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+    }
+  },
+  "job": {
+    "content": [
+      {
+        "reader": {
+          "parameter": {
+            "username": "t9Vyj8M+VWyM8a+wwQKdTg==",
+            "password": "rfpK+8Rc5IAEBt6R8SsNrw==",
+            "column": [
+              "id",
+              "id",
+              "platform",
+              "member_id",
+              "member_no",
+              "mobile",
+              "created_at",
+              "last_updated_at",
+              "created_by"
+            ],
+            "where": "1 = 1",
+            "connection": [
+              {
+                "jdbcUrl": [
+                  "jdbc:mysql://10.247.9.164:3306/member_center"
+                ],
+                "table": [
+                  "t_member_mobile"
+                ]
+              }
+            ],
+            "splitPk": "id"
+          },
+          "name": "mysqlreader"
+        },
+        "writer": {
+          "parameter": {
+            "settings": {
+              "index": {
+                "number_of_shards": 16,
+                "max_result_window": 10000,
+                "number_of_replicas": 1
+              }
+            },
+            "index": "member_t_member_mobile",
+            "autoCreateIndex": false,
+            "batchSize": 1000,
+            "dynmaic": false,
+            "username": "elastic",
+            "password": "qcOl8siL95H3q6Hh333Y6N9m",
+            "address": "10.196.66.232:9200",
+            "column": [
+              {
+                "name": "id",
+                "type": "id"
+              },
+              {
+                "name": "id",
+                "type": "long"
+              },
+              {
+                "name": "platform",
+                "type": "integer"
+              },
+              {
+                "name": "memberId",
+                "type": "long"
+              },
+              {
+                "name": "memberNo",
+                "type": "keyword"
+              },
+              {
+                "name": "mobile",
+                "type": "keyword"
+              },
+              {
+                "name": "createdAt",
+                "type": "date"
+              },
+              {
+                "name": "lastUpdatedAt",
+                "type": "date"
+              },
+              {
+                "name": "createdBy",
+                "type": "keyword"
+              }
+            ]
+          },
+          "name": "es7writer"
+        }
+      }
+    ],
+    "setting": {
+      "speed": {
+        "channel": "5"
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "memberId": {
+        "type": "long"
+      },
+      "gender": {
+        "type": "integer"
+      },
+      "mobile": {
+        "type": "keyword"
+      },
+      "email": {
+        "type": "keyword"
+      },
+      "nickname": {
+        "type": "keyword"
+      },
+      "logo": {
+        "type": "keyword"
+      },
+      "wechatOpenid": {
+        "type": "keyword"
+      },
+      "wechatNickname": {
+        "type": "keyword"
+      },
+      "wechatLogo": {
+        "type": "keyword"
+      },
+      "birthday": {
+        "type": "date"
+      },
+      "createdAt": {
+        "type": "date"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      },
+      "lastUpdatedAt": {
+        "type": "date"
+      }
+    }
+  },
+  "settings": {
+    "number_of_shards": "1",
+    "max_result_window": "100000",
+    "number_of_replicas": "1"
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "common": {
+    "column": {
+      "dateFormat": "yyyy-MM-dd",
+      "datetimeFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+    }
+  },
+  "job": {
+    "content": [
+      {
+        "reader": {
+          "parameter": {
+            "password": "DvpJe2x",
+            "column": [
+              "id",
+              "id",
+              "member_id",
+              "bill_id",
+              "type",
+              "card_type",
+              "card_price",
+              "valid_days",
+              "issue_date",
+              "expire_date",
+              "refunded",
+              "seller_id",
+              "city_id",
+              "shop_code",
+              "last_issue_coupons_at",
+              "created_at",
+              "created_by",
+              "updated_at",
+              "updated_by",
+              "last_updated_at"
+            ],
+            "where": "1 = 1",
+            "connection": [
+              {
+                "jdbcUrl": [
+                  "jdbc:mysql://10.251.77.188:3306/member_center"
+                ],
+                "table": [
+                  "yh_super_member_operation"
+                ]
+              }
+            ],
+            "splitPk": "id",
+            "username": "yh_dev"
+          },
+          "name": "mysqlreader"
+        },
+        "writer": {
+          "parameter": {
+            "settings": {
+              "index": {
+                "number_of_shards": 1,
+                "max_result_window": 200000,
+                "number_of_replicas": 0
+              }
+            },
+            "password": "ak7NEDt41fu43pY6U0J6y1k9",
+            "address": "10.195.5.32:9200",
+            "column": [
+              {
+                "name": "id",
+                "type": "id"
+              },
+              {
+                "name": "id",
+                "type": "long",
+                "colNo": 0
+              },
+              {
+                "name": "memberId",
+                "type": "long",
+                "colNo": 1
+              },
+              {
+                "name": "billId",
+                "type": "long",
+                "colNo": 2
+              },
+              {
+                "name": "type",
+                "type": "long",
+                "colNo": 3
+              },
+              {
+                "name": "cardType",
+                "type": "long",
+                "colNo": 4
+              },
+              {
+                "name": "cardPrice",
+                "type": "double",
+                "colNo": 5
+              },
+              {
+                "name": "validDays",
+                "type": "integer",
+                "colNo": 6
+              },
+              {
+                "name": "issueDate",
+                "type": "date",
+                "extParamMap": {
+                  "dateFormat": "yyyy-MM-dd"
+                },
+                "colNo": 7
+              },
+              {
+                "name": "expireDate",
+                "type": "date",
+                "extParamMap": {
+                  "dateFormat": "yyyy-MM-dd"
+                },
+                "colNo": 8
+              },
+              {
+                "name": "refunded",
+                "type": "integer",
+                "colNo": 9
+              },
+              {
+                "name": "sellerId",
+                "type": "keyword",
+                "colNo": 10
+              },
+              {
+                "name": "cityId",
+                "type": "keyword",
+                "colNo": 11
+              },
+              {
+                "name": "shopCode",
+                "type": "keyword",
+                "colNo": 12
+              },
+              {
+                "name": "lastIssueCouponsAt",
+                "type": "date",
+                "extParamMap": {
+                  "dateFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+                },
+                "colNo": 13
+              },
+              {
+                "name": "createdAt",
+                "type": "date",
+                "extParamMap": {
+                  "dateFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+                },
+                "colNo": 14
+              },
+              {
+                "name": "createdBy",
+                "type": "keyword",
+                "colNo": 15
+              },
+              {
+                "name": "updatedAt",
+                "type": "date",
+                "extParamMap": {
+                  "dateFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+                },
+                "colNo": 16
+              },
+              {
+                "name": "updatedBy",
+                "type": "keyword",
+                "colNo": 17
+              },
+              {
+                "name": "lastUpdatedAt",
+                "type": "date",
+                "extParamMap": {
+                  "dateFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+                },
+                "colNo": 18
+              }
+            ],
+            "index": "member_yh_super_member_operation",
+            "autoCreateIndex": false,
+            "batchSize": 1000,
+            "dynmaic": false,
+            "username": "elastic"
+          },
+          "name": "es7writer"
+        }
+      }
+    ],
+    "setting": {
+      "speed": {
+        "channel": "5"
+      }
+    }
+  }
+}

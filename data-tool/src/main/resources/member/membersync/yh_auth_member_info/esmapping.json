@@ -1,0 +1,53 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "memberId": {
+        "type": "long"
+      },
+      "realName": {
+        "type": "keyword"
+      },
+      "idCardNo": {
+        "type": "keyword"
+      },
+      "idCardType": {
+        "type": "integer"
+      },
+      "isAuth": {
+        "type": "integer"
+      },
+      "authPlatform": {
+        "type": "keyword"
+      },
+      "authTime": {
+        "type": "date"
+      },
+      "createdAt": {
+        "type": "date"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      },
+      "lastUpdatedAt": {
+        "type": "date"
+      },
+      "isDeleted": {
+        "type": "integer"
+      }
+    }
+  },
+  "settings": {
+    "number_of_shards": "1",
+    "max_result_window": "100000",
+    "number_of_replicas": "1"
+  }
+}

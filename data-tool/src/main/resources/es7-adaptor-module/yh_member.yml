@@ -1,0 +1,14 @@
+dataSourceKey: defaultDS        # 源数据源的key, 对应上面配置的srcDataSources中的值
+destination: yh-member-binlog            # cannal的instance或者MQ的topic
+groupId: canal-es7-adaptor-ymb               # 对应MQ模式下的groupId, 只会同步对应groupId的数据
+esMapping:
+  _index: member_yh_member           # es 的索引名称
+  _id: _id                      # es 的_id, 如果不配置该项必须配置下面的pk项_id则会由es自动分配
+  #  pk: id                       # 如果不需要_id, 则需要指定一个属性为主键属性
+  # sql映射
+  sql: "select a.id as _id,a.member_code as memberCode,a.mobile,a.email,a.wechat_openid as wechatOpenid,a.account_type as accountType,a.password,a.status,a.associate_id as associateId,a.signup_time as signupTime,a.created_at as createdAt,a.created_by as createdBy,a.updated_at as updatedAt,a.updated_by as updatedBy,a.wechat_unionid as wechatUnionid,a.binding_time as bindingTime,a.last_updated_at as lastUpdatedAt,a.source,a.bravo_user_flag as bravoUserFlag,a.bravo_user_binding_flag as bravoUserBindingFlag,a.member_type as memberType,a.is_initial_password as isInitialPassword,a.member_group as memberGroup,a.member_no as memberNo,a.platform,a.agent_support_tag as agentSupportTag from yh_member a"
+  #  objFields:
+  #    _labels: array:;           # 数组或者对象属性, array:; 代表以;字段里面是以;分隔的
+  #    _obj: object               # json对象
+  #  etlCondition: "where a.last_updated_at>='{0}'"     # etl 的条件参数
+  commitBatch: 3000

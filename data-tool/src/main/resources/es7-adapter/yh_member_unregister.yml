@@ -1,0 +1,15 @@
+dataSourceKey: defaultDS
+destination: yh-member-unregister-binlog
+groupId: group_yh-member-unregister
+outerAdapterKey: yh_member_unregister-es7-key
+esMapping:
+  _index: member_yh_member_unregister
+  _id: _id
+  sql: select a.id as _id,a.id as id,a.member_id as memberId,a.mobile as mobile,a.comment_text
+    as commentText,a.comment_options as commentOptions,a.created_at as createdAt,a.created_by
+    as createdBy,a.updated_at as updatedAt,a.updated_by as updatedBy,a.last_updated_at
+    as lastUpdatedAt,a.id as _id,a.id as id,a.member_id as memberId,a.mobile as mobile,a.comment_text
+    as commentText,a.comment_options as commentOptions,a.created_at as createdAt,a.created_by
+    as createdBy,a.updated_at as updatedAt,a.updated_by as updatedBy,a.last_updated_at
+    as lastUpdatedAt from yh_member_unregister a
+  commitBatch: 3000

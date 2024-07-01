@@ -1,0 +1,192 @@
+{
+  "common": {
+    "column": {
+      "dateFormat": "yyyy-MM-dd",
+      "datetimeFormat": "yyyy-MM-dd HH:mm:ss:SSS"
+    }
+  },
+  "job": {
+    "content": [
+      {
+        "reader": {
+          "parameter": {
+            "username": "t9Vyj8M+VWyM8a+wwQKdTg==",
+            "password": "rfpK+8Rc5IAEBt6R8SsNrw==",
+            "column": [
+              "id",
+              "id",
+              "member_id",
+              "card_name",
+              "card_no",
+              "card_type",
+              "front_img_type",
+              "front_img",
+              "negative_img_type",
+              "negative_img",
+              "is_auth",
+              "auth_time",
+              "activity_type",
+              "auth_channel_type",
+              "expire_time",
+              "extend_info",
+              "created_at",
+              "created_by",
+              "updated_at",
+              "updated_by",
+              "last_updated_at",
+              "is_deleted"
+            ],
+            "where": "1 = 1",
+            "connection": [
+              {
+                "jdbcUrl": [
+                  "jdbc:mysql://10.247.9.164:3306/member_center"
+                ],
+                "table": [
+                  "yh_member_activity_auth_info"
+                ]
+              }
+            ],
+            "splitPk": "id"
+          },
+          "name": "mysqlreader"
+        },
+        "writer": {
+          "parameter": {
+            "settings": {
+              "index": {
+                "number_of_shards": 1,
+                "max_result_window": 200000,
+                "number_of_replicas": 0
+              }
+            },
+            "dynmaic": false,
+            "username": "elastic",
+            "password": "qcOl8siL95H3q6Hh333Y6N9m",
+            "address": "10.196.66.232:9200",
+            "index": "member_yh_member_activity_auth_info",
+            "autoCreateIndex": false,
+            "batchSize": 1000,
+            "column": [
+              {
+                "name": "id",
+                "type": "id"
+              },
+              {
+                "colNo": 0,
+                "name": "id",
+                "type": "long"
+              },
+              {
+                "colNo": 1,
+                "name": "memberId",
+                "type": "long"
+              },
+              {
+                "colNo": 2,
+                "name": "cardName",
+                "type": "keyword"
+              },
+              {
+                "colNo": 3,
+                "name": "cardNo",
+                "type": "keyword"
+              },
+              {
+                "colNo": 4,
+                "name": "cardType",
+                "type": "integer"
+              },
+              {
+                "colNo": 5,
+                "name": "frontImgType",
+                "type": "keyword"
+              },
+              {
+                "colNo": 6,
+                "name": "frontImg",
+                "type": "keyword"
+              },
+              {
+                "colNo": 7,
+                "name": "negativeImgType",
+                "type": "keyword"
+              },
+              {
+                "colNo": 8,
+                "name": "negativeImg",
+                "type": "keyword"
+              },
+              {
+                "colNo": 9,
+                "name": "isAuth",
+                "type": "integer"
+              },
+              {
+                "colNo": 10,
+                "name": "authTime",
+                "type": "date"
+              },
+              {
+                "colNo": 11,
+                "name": "activityType",
+                "type": "keyword"
+              },
+              {
+                "colNo": 12,
+                "name": "authChannelType",
+                "type": "keyword"
+              },
+              {
+                "colNo": 13,
+                "name": "expireTime",
+                "type": "keyword"
+              },
+              {
+                "colNo": 14,
+                "name": "extendInfo",
+                "type": "keyword"
+              },
+              {
+                "colNo": 15,
+                "name": "createdAt",
+                "type": "date"
+              },
+              {
+                "colNo": 16,
+                "name": "createdBy",
+                "type": "keyword"
+              },
+              {
+                "colNo": 17,
+                "name": "updatedAt",
+                "type": "date"
+              },
+              {
+                "colNo": 18,
+                "name": "updatedBy",
+                "type": "keyword"
+              },
+              {
+                "colNo": 19,
+                "name": "lastUpdatedAt",
+                "type": "date"
+              },
+              {
+                "colNo": 20,
+                "name": "isDeleted",
+                "type": "integer"
+              }
+            ]
+          },
+          "name": "es7writer"
+        }
+      }
+    ],
+    "setting": {
+      "speed": {
+        "channel": "5"
+      }
+    }
+  }
+}

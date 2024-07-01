@@ -1,0 +1,83 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "platform": {
+        "type": "integer"
+      },
+      "memberId": {
+        "type": "long"
+      },
+      "memberNo": {
+        "type": "keyword"
+      },
+      "memberType": {
+        "type": "keyword"
+      },
+      "memberStatus": {
+        "type": "keyword"
+      },
+      "idType": {
+        "type": "keyword"
+      },
+      "idNo": {
+        "type": "keyword"
+      },
+      "sex": {
+        "type": "keyword"
+      },
+      "birthday": {
+        "type": "date"
+      },
+      "email": {
+        "type": "keyword"
+      },
+      "mobile": {
+        "type": "keyword"
+      },
+      "createdAt": {
+        "type": "date"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      },
+      "userName": {
+        "type": "keyword"
+      },
+      "aliasName": {
+        "type": "keyword"
+      },
+      "openId": {
+        "type": "keyword"
+      },
+      "qq": {
+        "type": "keyword"
+      },
+      "signupTime": {
+        "type": "date"
+      },
+      "checkPhoneFlag": {
+        "type": "boolean"
+      },
+      "signupCity": {
+        "type": "keyword"
+      },
+      "lastUpdatedAt": {
+        "type": "date"
+      }
+    }
+  },
+  "settings": {
+    "number_of_shards": "1",
+    "max_result_window": "100000",
+    "number_of_replicas": "1"
+  }
+}

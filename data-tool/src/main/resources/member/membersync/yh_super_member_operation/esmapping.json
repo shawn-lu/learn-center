@@ -1,0 +1,74 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "memberId": {
+        "type": "long"
+      },
+      "billId": {
+        "type": "long"
+      },
+      "type": {
+        "type": "byte"
+      },
+      "cardType": {
+        "type": "byte"
+      },
+      "cardPrice": {
+        "type": "double"
+      },
+      "validDays": {
+        "type": "integer"
+      },
+      "issueDate": {
+        "type": "date",
+        "format": "yyyy-MM-dd"
+      },
+      "expireDate": {
+        "type": "date",
+        "format": "yyyy-MM-dd"
+      },
+      "refunded": {
+        "type": "integer"
+      },
+      "sellerId": {
+        "type": "keyword"
+      },
+      "cityId": {
+        "type": "keyword"
+      },
+      "shopCode": {
+        "type": "keyword"
+      },
+      "lastIssueCouponsAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "createdAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "createdBy": {
+        "type": "keyword"
+      },
+      "updatedAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      },
+      "updatedBy": {
+        "type": "keyword"
+      },
+      "lastUpdatedAt": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss:SSS"
+      }
+    }
+  },
+  "settings": {
+    "number_of_shards": "1",
+    "max_result_window": "100000",
+    "number_of_replicas": "1"
+  }
+}

@@ -1,0 +1,13 @@
+dataSourceKey: defaultDS
+destination: yh-member-alipay-binlog
+groupId: group_yh-member-alipay
+outerAdapterKey: yh_member_alipay-es7-key
+esMapping:
+  _index: member_yh_member_alipay
+  _id: _id
+  sql: select a.id as _id,a.id as id,a.member_id as memberId,a.app_id as appId,a.open_id
+    as openId,a.created_at as createdAt,a.created_by as createdBy,a.last_updated_at
+    as lastUpdatedAt,a.id as _id,a.id as id,a.member_id as memberId,a.app_id as appId,a.open_id
+    as openId,a.created_at as createdAt,a.created_by as createdBy,a.last_updated_at
+    as lastUpdatedAt from yh_member_alipay a
+  commitBatch: 3000

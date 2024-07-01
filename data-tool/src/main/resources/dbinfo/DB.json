@@ -1,0 +1,38 @@
+[
+  {
+    "env": "sh-dev",
+    "standard": true,
+    "url": "jdbc:mysql://10.251.77.235:3306/dms_rocket_mq?characterEncoding=utf-8&useSSL=false",
+    "username": "yh_canal",
+    "password": "j8,X/~1;95|8D63D",
+    "dbname": "dms_rocket_mq"
+  },
+  {
+    "env": "sh-sit",
+    "url": "jdbc:mysql://10.246.193.14:3306/dms_rocket_mq?characterEncoding=utf-8&useSSL=false",
+    "username": "yh_dev",
+    "password": "X520inzWrG7skGTa",
+    "dbname": "dms_rocket_mq"
+  },
+  {
+    "env": "fz-sit",
+    "url": "jdbc:mysql://10.205.0.243:3306/dms_rocket_mq?characterEncoding=utf-8&useSSL=false",
+    "username": "yh_dev",
+    "password": "DvpJe2x",
+    "dbname": "dms_rocket_mq"
+  },
+  {
+    "env": "sh-prod",
+    "url": "jdbc:mysql://10.247.42.178:13306/dms_rocket_mq?characterEncoding=utf-8&useSSL=false",
+    "username": "yh_product",
+    "password": "),f#c+i+3B^g7NXa",
+    "dbname": "dms_rocket_mq"
+  },
+  {
+    "env": "fz-prod",
+    "url": "jdbc:mysql://10.208.133.108:3306/dms_rocket_mq?characterEncoding=utf-8&useSSL=false",
+    "username": "yh_canal",
+    "password": "j8,X/~1;95|8D63D",
+    "dbname": "dms_rocket_mq"
+  }
+]

@@ -1,0 +1,15 @@
+dataSourceKey: defaultDS
+destination: yh-member-extend-config-binlog
+groupId: group_yh-member-extend-config
+outerAdapterKey: yh_member_extend_config-es7-key
+esMapping:
+  _index: member_yh_member_extend_config
+  _id: _id
+  sql: select a.id as _id,a.id as id,a.biz_code as bizCode,a.biz_desc as bizDesc,a.value_type
+    as valueType,a.is_deleted as isDeleted,a.created_by as createdBy,a.created_at
+    as createdAt,a.updated_by as updatedBy,a.updated_at as updatedAt,a.last_updated_at
+    as lastUpdatedAt,a.id as _id,a.id as id,a.biz_code as bizCode,a.biz_desc as bizDesc,a.value_type
+    as valueType,a.is_deleted as isDeleted,a.created_by as createdBy,a.created_at
+    as createdAt,a.updated_by as updatedBy,a.updated_at as updatedAt,a.last_updated_at
+    as lastUpdatedAt from yh_member_extend_config a
+  commitBatch: 3000
